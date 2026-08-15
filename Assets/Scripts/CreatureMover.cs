@@ -1,6 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Creature))]
 public class CreatureMover : MonoBehaviour
 {
     private static readonly int IsMoving = Animator.StringToHash("IsMoving");
@@ -10,7 +11,6 @@ public class CreatureMover : MonoBehaviour
     [SerializeField] private float speed = 4f;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Animator _animator;
-    [SerializeField] private TerrainProbe probe;
     [SerializeField] private Creature creature;
 
     private Rigidbody2D _rb;
@@ -39,7 +39,7 @@ public class CreatureMover : MonoBehaviour
         var velocity = _input * speed;
         var nextPosition = _rb.position + velocity * Time.fixedDeltaTime;
 
-        var required = probe.GetRequiredCapability(nextPosition);
+        var required = TerrainProbe.Instance.GetRequiredCapability(nextPosition);
         if (required != null && !creature.CanUse(required))
         {
             velocity = Vector2.zero;

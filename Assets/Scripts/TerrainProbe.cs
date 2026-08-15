@@ -3,11 +3,21 @@ using UnityEngine.Tilemaps;
 
 public class TerrainProbe : MonoBehaviour
 {
+    public static TerrainProbe Instance { get; private set; }
+
     [SerializeField] private Grid grid;
     [SerializeField] private Tilemap waterMap;
     [SerializeField] private Tilemap chasmMap;
     [SerializeField] private CapabilitySigil swimmingSigil;
     [SerializeField] private CapabilitySigil flyingSigil;
+
+    public CapabilitySigil SwimmingSigil => swimmingSigil;
+    public CapabilitySigil FlyingSigil => flyingSigil;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     public CapabilitySigil GetRequiredCapability(Vector3 worldPos)
     {

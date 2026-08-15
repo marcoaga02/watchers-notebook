@@ -126,7 +126,6 @@ GameObject:
   - component: {fileID: 3767693362278263372}
   - component: {fileID: 1548027915449069288}
   - component: {fileID: 6965999576317392374}
-  - component: {fileID: 3003663432471372441}
   - component: {fileID: 2744868706651540842}
   - component: {fileID: 347444026099274749}
   m_Layer: 0
@@ -242,25 +241,7 @@ MonoBehaviour:
   speed: 4
   _spriteRenderer: {fileID: 6491926555215746539}
   _animator: {fileID: 8885522909749678423}
-  probe: {fileID: 3003663432471372441}
   creature: {fileID: 347444026099274749}
---- !u!114 &3003663432471372441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693237155973225623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cb8c4e3e41103a60b16823046ce54ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TerrainProbe
-  grid: {fileID: 0}
-  waterMap: {fileID: 0}
-  chasmMap: {fileID: 0}
-  swimmingSigil: {fileID: 11400000, guid: 84a6966185a93dca782cc635144cfd03, type: 2}
-  flyingSigil: {fileID: 11400000, guid: bad63adb0247baae5bf7a14f5cf16774, type: 2}
 --- !u!114 &2744868706651540842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,15 +258,12 @@ MonoBehaviour:
   shadow: {fileID: 2155549478802166601}
   bodyRenderer: {fileID: 6491926555215746539}
   waterMask: {fileID: 8134617015361286486}
-  probe: {fileID: 3003663432471372441}
   creature: {fileID: 347444026099274749}
-  swimmingSigil: {fileID: 11400000, guid: 84a6966185a93dca782cc635144cfd03, type: 2}
-  flyingSigil: {fileID: 11400000, guid: bad63adb0247baae5bf7a14f5cf16774, type: 2}
   flyHeight: 0.5
   groundY: -0.025
   maskSubmergedY: 1
   maskDryY: 0
-  lerpSpeed: 6
+  lerpSpeed: 12
 --- !u!114 &347444026099274749
 MonoBehaviour:
   m_ObjectHideFlags: 0
