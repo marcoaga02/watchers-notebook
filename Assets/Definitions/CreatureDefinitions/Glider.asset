@@ -15,4 +15,4 @@ MonoBehaviour:
   className: Glider
   parent: {fileID: 11400000, guid: 086fd5b38470c937ba12651e55db2369, type: 2}
   declaredCapabilities:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: bad63adb0247baae5bf7a14f5cf16774, type: 2}

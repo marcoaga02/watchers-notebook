@@ -1,19 +1,21 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Player : MonoBehaviour
+public class CreatureMover : MonoBehaviour
 {
     private static readonly int IsMoving = Animator.StringToHash("IsMoving");
     private static readonly int MoveX = Animator.StringToHash("MoveX");
     private static readonly int MoveY = Animator.StringToHash("MoveY");
-    
+
     [SerializeField] private float speed = 4f;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Animator _animator;
-    
+    [SerializeField] private TerrainProbe probe;
+    [SerializeField] private Creature creature;
+
     private Rigidbody2D _rb;
     private bool _hasAnimator;
-    
+
     private Vector2 _input;
 
     private void Awake()
@@ -22,26 +24,37 @@ public class Player : MonoBehaviour
         _hasAnimator = _animator != null;
     }
 
+    public void SetInput(Vector2 input)
+    {
+        _input = input.normalized;
+    }
+
     private void Update()
     {
-        _input = new Vector2(Input.GetAxisRaw("Horizontal"),
-            Input.GetAxisRaw("Vertical")).normalized;
-        
         UpdateAnimation();
     }
 
     private void FixedUpdate()
     {
-        _rb.linearVelocity = _input * speed;
+        var velocity = _input * speed;
+        var nextPosition = _rb.position + velocity * Time.fixedDeltaTime;
+
+        var required = probe.GetRequiredCapability(nextPosition);
+        if (required != null && !creature.CanUse(required))
+        {
+            velocity = Vector2.zero;
+        }
+
+        _rb.linearVelocity = velocity;
     }
-    
+
     private void UpdateAnimation()
     {
         if (!_hasAnimator)
         {
             return;
         }
-        
+
         var isMoving = _input.sqrMagnitude > 0.01f;
         _animator.SetBool(IsMoving, isMoving);
 
@@ -49,7 +62,7 @@ public class Player : MonoBehaviour
         {
             return;
         }
-        
+
         if (Mathf.Abs(_input.x) > 0.01f) // there is horizontal movement
         {
             _animator.SetFloat(MoveX, 1f);

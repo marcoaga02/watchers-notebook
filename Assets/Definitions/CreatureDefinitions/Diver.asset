@@ -15,4 +15,4 @@ MonoBehaviour:
   className: Diver
   parent: {fileID: 11400000, guid: 086fd5b38470c937ba12651e55db2369, type: 2}
   declaredCapabilities:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 84a6966185a93dca782cc635144cfd03, type: 2}
