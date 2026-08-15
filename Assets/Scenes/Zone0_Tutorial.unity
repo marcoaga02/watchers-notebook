@@ -1775,7 +1775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e750cb1cf820cac6ab9ca1632a403062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
-  target: {fileID: 0}
+  target: {fileID: 1503008427}
   smoothTime: 0.15
   offset: {x: 0, y: 0}
 --- !u!114 &519420034
@@ -45931,6 +45931,11 @@ MonoBehaviour:
   chasmMap: {fileID: 671120419}
   swimmingSigil: {fileID: 11400000, guid: 84a6966185a93dca782cc635144cfd03, type: 2}
   flyingSigil: {fileID: 11400000, guid: bad63adb0247baae5bf7a14f5cf16774, type: 2}
+--- !u!4 &1503008427 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2637991325129454414, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+  m_PrefabInstance: {fileID: 131861705}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
