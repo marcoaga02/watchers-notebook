@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe250eb8b9834fedb4f340a50a7c353e, type: 3}
   m_Name: Diver
   m_EditorClassIdentifier: Assembly-CSharp::CreatureDefinition
-  className: 
-  parent: {fileID: 0}
-  declaredCapabilities: []
+  className: Diver
+  parent: {fileID: 11400000, guid: 086fd5b38470c937ba12651e55db2369, type: 2}
+  declaredCapabilities:
+  - {fileID: 0}

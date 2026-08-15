@@ -10,7 +10,6 @@ public class CameraFollow : MonoBehaviour
 
     private void LateUpdate()
     {
-        // ReSharper disable once Unity.PerformanceCriticalCodeNullComparison
         if (target == null)
         {
             return;

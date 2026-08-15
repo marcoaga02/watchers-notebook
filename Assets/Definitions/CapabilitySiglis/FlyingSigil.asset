@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: FlyingSigil
   m_EditorClassIdentifier: Assembly-CSharp::CapabilitySigil
   interfaceName: IFlyable
-  displayName: Flyable Sigil
+  displayName: Flying Sigil
   icon: {fileID: 5277253155122638260, guid: fe2ee7e9e731ff7c2a7acbcb90463fe4, type: 3}

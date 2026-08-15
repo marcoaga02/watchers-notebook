@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SwimmingSigil
   m_EditorClassIdentifier: Assembly-CSharp::CapabilitySigil
   interfaceName: ISwimmable
-  displayName: Swimmable Sigil
+  displayName: Swimming Sigil
   icon: {fileID: -1003723262732462268, guid: fe2ee7e9e731ff7c2a7acbcb90463fe4, type: 3}
