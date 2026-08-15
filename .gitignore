@@ -120,3 +120,6 @@ InitTestScene*.unity*
 # OS
 .DS_Store
 Thumbs.db
+
+# Others
+/hidden/
