@@ -8,10 +8,10 @@ public class Player : MonoBehaviour
     private static readonly int MoveY = Animator.StringToHash("MoveY");
     
     [SerializeField] private float speed = 4f;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Animator _animator;
     
     private Rigidbody2D _rb;
-    private Animator _animator;
-    private SpriteRenderer _spriteRenderer;
     private bool _hasAnimator;
     
     private Vector2 _input;
@@ -19,8 +19,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        _hasAnimator = TryGetComponent(out _animator);
+        _hasAnimator = _animator != null;
     }
 
     private void Update()
