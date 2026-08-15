@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53bb6d17b707463aaa13a522214d8456, type: 3}
-  m_Name: SwimmableSigil
+  m_Name: FlyingSigil
   m_EditorClassIdentifier: Assembly-CSharp::CapabilitySigil
-  interfaceName: ISwimming
-  displayName: Swimming Sigil
-  icon: {fileID: -1003723262732462268, guid: fe2ee7e9e731ff7c2a7acbcb90463fe4, type: 3}
+  interfaceName: IFlyable
+  displayName: Flyable Sigil
+  icon: {fileID: 5277253155122638260, guid: fe2ee7e9e731ff7c2a7acbcb90463fe4, type: 3}

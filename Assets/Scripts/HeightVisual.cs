@@ -7,7 +7,9 @@ public class HeightVisual : MonoBehaviour
     [SerializeField] private SpriteRenderer bodyRenderer;
     [SerializeField] private SpriteMask waterMask;
     [SerializeField] private TerrainProbe probe;
-    
+    [SerializeField] private CapabilitySigil swimmingSigil;
+    [SerializeField] private CapabilitySigil flyingSigil;
+
     [Header("Fly")]
     [SerializeField] private float flyHeight = 0.8f;
     [SerializeField] private float groundY = -0.025f;
@@ -36,8 +38,8 @@ public class HeightVisual : MonoBehaviour
     private void Update()
     {
         var capability = probe.GetRequiredCapability(transform.position);
-        var swimming = capability == "ISwimming";
-        var flying = capability == "IFlying";
+        var swimming = capability == swimmingSigil;
+        var flying = capability == flyingSigil;
 
         _bodyTargetY = flying ? flyHeight : groundY;
         _maskTargetY = swimming ? maskSubmergedY : maskDryY;

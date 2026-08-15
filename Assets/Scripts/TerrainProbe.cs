@@ -6,24 +6,22 @@ public class TerrainProbe : MonoBehaviour
     [SerializeField] private Grid grid;
     [SerializeField] private Tilemap waterMap;
     [SerializeField] private Tilemap chasmMap;
+    [SerializeField] private CapabilitySigil swimmingSigil;
+    [SerializeField] private CapabilitySigil flyingSigil;
 
-    public string GetRequiredCapability(Vector3 worldPos)
+    public CapabilitySigil GetRequiredCapability(Vector3 worldPos)
     {
         var cell = grid.WorldToCell(worldPos);
         if (waterMap.HasTile(cell))
         {
-            return "ISwimming";
+            return swimmingSigil;
         }
+
         if (chasmMap.HasTile(cell))
         {
-            return "IFlying";
+            return flyingSigil;
         }
-        
-        return null;
-    }
 
-    private void Update()
-    {
-        var capability = GetRequiredCapability(transform.position);
+        return null;
     }
 }
