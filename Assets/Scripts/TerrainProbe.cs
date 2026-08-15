@@ -10,14 +10,20 @@ public class TerrainProbe : MonoBehaviour
     public string GetRequiredCapability(Vector3 worldPos)
     {
         var cell = grid.WorldToCell(worldPos);
-        if (waterMap.HasTile(cell)) return "ISwimming";
-        if (chasmMap.HasTile(cell)) return "IFlying";
+        if (waterMap.HasTile(cell))
+        {
+            return "ISwimming";
+        }
+        if (chasmMap.HasTile(cell))
+        {
+            return "IFlying";
+        }
+        
         return null;
     }
 
     private void Update()
     {
         var capability = GetRequiredCapability(transform.position);
-        Debug.Log(capability ?? "libero");
     }
 }

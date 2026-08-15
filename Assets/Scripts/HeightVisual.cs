@@ -24,7 +24,7 @@ public class HeightVisual : MonoBehaviour
     
     private void Start()
     {
-        // la maschera resta sempre attiva: e' la sua posizione a decidere l'effetto
+        // the mask stays always enabled: it's its position that determines the effect
         waterMask.enabled = true;
         bodyRenderer.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
 
