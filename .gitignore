@@ -104,3 +104,19 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Build output
+/Builds*
+/*_BurstDebugInformation_DoNotShip/
+/*_BackUpThisFolder_ButDontShipItWithYourGame/
+*.so
+*.so.*
+*.x86_64
+
+# Rider / IDE
+/.idea/
+/obj/
+
+# OS
+.DS_Store
+Thumbs.db
