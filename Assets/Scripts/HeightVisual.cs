@@ -43,7 +43,7 @@ public class HeightVisual : MonoBehaviour
 
         if (shadow != null)
         {
-            // whatever scale was authored in the Inspector is "normal, grounded" -
+            // whatever scale was authored in the Inspector is "normal, grounded":
             // flying only shrinks relative to that, it never imposes a fixed size
             _shadowGroundScaleX = shadow.localScale.x;
             _shadowAspectRatio = shadow.localScale.y / _shadowGroundScaleX;
