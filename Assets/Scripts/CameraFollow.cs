@@ -2,11 +2,18 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
+    public static CameraFollow Instance { get; private set; }
+
     public Transform target;
     public float smoothTime = 0.15f;
     public Vector2 offset;
 
     private Vector3 _velocity;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void LateUpdate()
     {

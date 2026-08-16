@@ -21,6 +21,8 @@ public class CreatureMover : MonoBehaviour
 
     private Vector2 _input;
 
+    public Vector2 Facing { get; private set; } = Vector2.down;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -32,9 +34,32 @@ public class CreatureMover : MonoBehaviour
         _input = input.normalized;
     }
 
+    public void SetControlEnabled(bool value)
+    {
+        enabled = value;
+        _rb.linearVelocity = Vector2.zero;
+        if (_spriteRenderer != null)
+        {
+            _spriteRenderer.enabled = value;
+        }
+    }
+
     private void Update()
     {
+        UpdateFacing();
         UpdateAnimation();
+    }
+
+    private void UpdateFacing()
+    {
+        if (_input.sqrMagnitude <= 0.01f)
+        {
+            return;
+        }
+
+        Facing = Mathf.Abs(_input.x) > 0.01f
+            ? new Vector2(Mathf.Sign(_input.x), 0f)
+            : new Vector2(0f, Mathf.Sign(_input.y));
     }
 
     private void FixedUpdate()

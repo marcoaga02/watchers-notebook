@@ -279,6 +279,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Creature
   definition: {fileID: 11400000, guid: d8715ba34da3f763ab48d570abb01fa5, type: 2}
+  testBindings:
+  - capability: {fileID: 11400000, guid: bad63adb0247baae5bf7a14f5cf16774, type: 2}
+    behavior: {fileID: 11400000, guid: 8ad53774f0000c8a2bbdeb903cd02ec0, type: 2}
 --- !u!114 &370123921708527123
 MonoBehaviour:
   m_ObjectHideFlags: 0
