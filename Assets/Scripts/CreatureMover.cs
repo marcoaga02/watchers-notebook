@@ -12,6 +12,9 @@ public class CreatureMover : MonoBehaviour
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Animator _animator;
     [SerializeField] private Creature creature;
+    [Tooltip("On: the rig has real left/right art (MoveX carries sign, no flip). " +
+             "Off: only one side exists, mirrored via flipX (Orc, old Player).")]
+    [SerializeField] private bool hasDirectionalSprites = true;
 
     private Rigidbody2D _rb;
     private bool _hasAnimator;
@@ -65,9 +68,12 @@ public class CreatureMover : MonoBehaviour
 
         if (Mathf.Abs(_input.x) > 0.01f) // there is horizontal movement
         {
-            _animator.SetFloat(MoveX, 1f);
+            _animator.SetFloat(MoveX, hasDirectionalSprites ? Mathf.Sign(_input.x) : 1f);
             _animator.SetFloat(MoveY, 0f);
-            _spriteRenderer.flipX = _input.x < 0f;
+            if (!hasDirectionalSprites)
+            {
+                _spriteRenderer.flipX = _input.x < 0f;
+            }
         }
         else // there is vertical movement
         {
