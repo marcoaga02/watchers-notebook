@@ -308,8 +308,9 @@ GameObject:
   - component: {fileID: 6883658680300217455}
   - component: {fileID: 9130363319245316299}
   - component: {fileID: 820237368963251157}
-  - component: {fileID: 4783110626504092858}
   - component: {fileID: 5609683809984856905}
+  - component: {fileID: 6085578354281746941}
+  - component: {fileID: 1263309958128592845}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -423,21 +424,7 @@ MonoBehaviour:
   speed: 4
   _spriteRenderer: {fileID: 3592138512623344584}
   _animator: {fileID: 1862722400439890639}
---- !u!114 &4783110626504092858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8985160675770995380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cb8c4e3e41103a60b16823046ce54ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TerrainProbe
-  grid: {fileID: 0}
-  waterMap: {fileID: 0}
-  chasmMap: {fileID: 0}
+  creature: {fileID: 6085578354281746941}
 --- !u!114 &5609683809984856905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,9 +441,34 @@ MonoBehaviour:
   shadow: {fileID: 8512980782634851690}
   bodyRenderer: {fileID: 3592138512623344584}
   waterMask: {fileID: 1958455798116941685}
-  probe: {fileID: 4783110626504092858}
+  creature: {fileID: 6085578354281746941}
   flyHeight: 0.5
   groundY: -0.025
-  maskSubmergedY: 0.42
-  maskDryY: 3
-  lerpSpeed: 6
+  maskSubmergedY: 1
+  maskDryY: 0
+  lerpSpeed: 12
+--- !u!114 &6085578354281746941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8985160675770995380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ec7193ddba21a599cc36b20d5ebd4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Creature
+  definition: {fileID: 11400000, guid: 086fd5b38470c937ba12651e55db2369, type: 2}
+--- !u!114 &1263309958128592845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8985160675770995380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c31bf59fbb37852abaa448a6ea393ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInput

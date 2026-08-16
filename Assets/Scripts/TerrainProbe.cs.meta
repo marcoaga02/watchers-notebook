@@ -1,2 +1,16 @@
 fileFormatVersion: 2
 guid: 5cb8c4e3e41103a60b16823046ce54ee
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - grid: {instanceID: 0}
+  - waterMap: {instanceID: 0}
+  - chasmMap: {instanceID: 0}
+  - swimmingSigil: {fileID: 11400000, guid: 84a6966185a93dca782cc635144cfd03, type: 2}
+  - flyingSigil: {fileID: 11400000, guid: bad63adb0247baae5bf7a14f5cf16774, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
