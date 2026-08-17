@@ -59,6 +59,22 @@ MonoBehaviour:
     m_Key: ui.implementation-of
     m_Metadata:
       m_Items: []
+  - m_Id: 90372615840917
+    m_Key: ui.no-creature-available
+    m_Metadata:
+      m_Items: []
+  - m_Id: 174498680406016
+    m_Key: ui.interface-section
+    m_Metadata:
+      m_Items: []
+  - m_Id: 175722427318272
+    m_Key: ui.creature-section-label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 178137142657024
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

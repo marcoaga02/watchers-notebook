@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Localization;
 using UnityEngine.UI;
 
 public class EvocationPanel : MonoBehaviour
@@ -16,8 +15,8 @@ public class EvocationPanel : MonoBehaviour
     [SerializeField] private SigilCompositionRow sigilRowPrefab;
 
     [Header("Matched creature")]
-    [SerializeField] private TMP_Text matchedSpeciesLabel;
-    [SerializeField] private LocalizedString matchedSpeciesPrefix;
+    [SerializeField] private CreatureRow creatureRow;
+    [SerializeField] private TMP_Text noCreatureLabel;
 
     [Header("Evocation")]
     [SerializeField] private Button evokeButton;
@@ -62,13 +61,15 @@ public class EvocationPanel : MonoBehaviour
 
         if (_matched == null)
         {
-            matchedSpeciesLabel.gameObject.SetActive(false);
+            creatureRow.gameObject.SetActive(false);
+            noCreatureLabel.gameObject.SetActive(true);
             evokeButton.interactable = false;
             return;
         }
 
-        matchedSpeciesLabel.gameObject.SetActive(true);
-        matchedSpeciesLabel.text = $"{matchedSpeciesPrefix.GetLocalizedString()} {_matched.displayName.GetLocalizedString()}";
+        creatureRow.gameObject.SetActive(true);
+        creatureRow.Setup(_matched);
+        noCreatureLabel.gameObject.SetActive(false);
 
         UpdateEvokeButton();
     }

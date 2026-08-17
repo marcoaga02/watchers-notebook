@@ -59,7 +59,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 81456237901234
-    m_Localized: 'Implementazione di {0} →'
+    m_Localized: "Implementazione di {0} \u2192"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 90372615840917
+    m_Localized: Nessuna creatura disponibile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 174498680406016
+    m_Localized: Interfacce
+    m_Metadata:
+      m_Items: []
+  - m_Id: 175722427318272
+    m_Localized: Creature disponibili
     m_Metadata:
       m_Items: []
   references:
