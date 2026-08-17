@@ -50,6 +50,14 @@ MonoBehaviour:
     m_Localized: 'Creatura: '
     m_Metadata:
       m_Items: []
+  - m_Id: 74991351365632
+    m_Localized: Ostacolo rilevato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 75143294222336
+    m_Localized: Premi E per evocare una creatura
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

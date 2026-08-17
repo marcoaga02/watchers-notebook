@@ -47,6 +47,14 @@ MonoBehaviour:
     m_Key: ui.creature-prefix
     m_Metadata:
       m_Items: []
+  - m_Id: 74991351365632
+    m_Key: ui.obstacle.detected
+    m_Metadata:
+      m_Items: []
+  - m_Id: 75143294222336
+    m_Key: ui.obstacle.press-to-evoke
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -6,18 +6,14 @@ using UnityEngine;
 public class PossessionController : MonoBehaviour
 {
     [SerializeField] private float spawnDistance = 1f;
-
-    // TODO: remove this field, testCreaturePrefab and the Input.GetKeyDown check
-    // in Update() once the real evocation panel exists; Evoke() will be called
-    // only from the panel button, with the creature chosen there.
-    [Header("Test evocation (remove once the panel exists)")]
-    [SerializeField] private KeyCode testEvokeKey = KeyCode.E;
-    [SerializeField] private GameObject testCreaturePrefab;
+    [SerializeField] private KeyCode cancelKey = KeyCode.Escape;
 
     private CreatureMover _playerMover;
     private PlayerInput _playerInput;
     private CreatureMover _possessed;
     private bool _hasLeftGround;
+
+    public bool IsPossessing => _possessed != null;
 
     private void Awake()
     {
@@ -29,10 +25,12 @@ public class PossessionController : MonoBehaviour
     {
         if (_possessed == null)
         {
-            if (testCreaturePrefab != null && Input.GetKeyDown(testEvokeKey))
-            {
-                Evoke(testCreaturePrefab, null);
-            }
+            return;
+        }
+
+        if (Input.GetKeyDown(cancelKey))
+        {
+            Return();
             return;
         }
 

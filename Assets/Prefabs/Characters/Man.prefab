@@ -108,7 +108,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Man
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5609683809984856905, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1040556143445320209, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
     - {fileID: 3471160246079603896, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
@@ -120,6 +121,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8985160675770995380, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       insertIndex: -1
       addedObject: {fileID: -7631737944568979446}
+    - targetCorrespondingSourceObject: {fileID: 8985160675770995380, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5449695374316178015}
   m_SourcePrefab: {fileID: 100100000, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
 --- !u!95 &2355447323020868097 stripped
 Animator:
@@ -164,3 +168,18 @@ MonoBehaviour:
   collectedBehaviors:
   - {fileID: 11400000, guid: 6f46c9b9e91385e609ba973cc0098dda, type: 2}
   - {fileID: 11400000, guid: 8ad53774f0000c8a2bbdeb903cd02ec0, type: 2}
+--- !u!114 &5449695374316178015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5032833040746797690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6b9a8368274f989f91417d82bb06aab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstaclePrompt
+  openKey: 101
+  promptRoot: {fileID: 0}
+  evocationPanel: {fileID: 0}
