@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CreatureMover))]
@@ -30,7 +31,7 @@ public class PossessionController : MonoBehaviour
         {
             if (testCreaturePrefab != null && Input.GetKeyDown(testEvokeKey))
             {
-                Evoke(testCreaturePrefab);
+                Evoke(testCreaturePrefab, null);
             }
             return;
         }
@@ -46,7 +47,7 @@ public class PossessionController : MonoBehaviour
         }
     }
 
-    public void Evoke(GameObject creaturePrefab)
+    public void Evoke(GameObject creaturePrefab, IEnumerable<KeyValuePair<CapabilitySigil, Behavior>> bindings)
     {
         if (_possessed != null)
         {
@@ -57,6 +58,15 @@ public class PossessionController : MonoBehaviour
         var instance = Instantiate(creaturePrefab, spawnPosition, Quaternion.identity);
         _possessed = instance.GetComponent<CreatureMover>();
         _hasLeftGround = false;
+
+        if (bindings != null)
+        {
+            var creature = instance.GetComponent<Creature>();
+            foreach (var binding in bindings)
+            {
+                creature.Bind(binding.Key, binding.Value);
+            }
+        }
 
         _playerMover.SetControlEnabled(false);
         _playerInput.SetTarget(_possessed);

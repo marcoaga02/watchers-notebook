@@ -117,6 +117,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8985160675770995380, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7781698519129343351}
+    - targetCorrespondingSourceObject: {fileID: 8985160675770995380, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7631737944568979446}
   m_SourcePrefab: {fileID: 100100000, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
 --- !u!95 &2355447323020868097 stripped
 Animator:
@@ -140,7 +143,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 492998359fb83f9b28ac1c8c69c1139c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PossessionController
-  cameraFollow: {fileID: 0}
   spawnDistance: 1
   testEvokeKey: 101
   testCreaturePrefab: {fileID: 8995805671787711397, guid: 21d0bf5baf93ef4fea533f363cd685f8, type: 3}
+--- !u!114 &-7631737944568979446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5032833040746797690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54231ec6aa5e9054ab27a5cf26560068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
+  collectedSigils:
+  - {fileID: 11400000, guid: 84a6966185a93dca782cc635144cfd03, type: 2}
+  - {fileID: 11400000, guid: bad63adb0247baae5bf7a14f5cf16774, type: 2}
+  collectedBehaviors:
+  - {fileID: 11400000, guid: 6f46c9b9e91385e609ba973cc0098dda, type: 2}
+  - {fileID: 11400000, guid: 8ad53774f0000c8a2bbdeb903cd02ec0, type: 2}

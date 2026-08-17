@@ -17,7 +17,39 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: a3934c22933ed1fd688b94cdb220f1e6, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 1181243670528
+    m_Localized: Swimming Sigil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1423389229056
+    m_Localized: Flying Sigil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1757905944576
+    m_Localized: Fly
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1928991604736
+    m_Localized: Swim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11629091356672
+    m_Localized: Lizard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11844175265792
+    m_Localized: Elf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20296276639744
+    m_Localized: Evoke
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32908322275328
+    m_Localized: 'Creature: '
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

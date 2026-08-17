@@ -12,6 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a966586896f3dbbab56076bd5b476fd, type: 3}
   m_Name: FlyBehavior
   m_EditorClassIdentifier: Assembly-CSharp::Behavior
-  displayName: Fly Behavior
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
+    m_TableEntryReference:
+      m_KeyId: 1757905944576
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   icon: {fileID: 0}
   satisfies: {fileID: 11400000, guid: bad63adb0247baae5bf7a14f5cf16774, type: 2}
+  references:
+    version: 2
+    RefIds: []

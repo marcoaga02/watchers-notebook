@@ -16,3 +16,17 @@ MonoBehaviour:
   parent: {fileID: 11400000, guid: 086fd5b38470c937ba12651e55db2369, type: 2}
   declaredCapabilities:
   - {fileID: 11400000, guid: 84a6966185a93dca782cc635144cfd03, type: 2}
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
+    m_TableEntryReference:
+      m_KeyId: 11629091356672
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  icon: {fileID: -9122917226769246161, guid: 3f04481e0d6e0b676a58a9de67f16c16, type: 3}
+  prefab: {fileID: 8995805671787711397, guid: 21d0bf5baf93ef4fea533f363cd685f8, type: 3}
+  references:
+    version: 2
+    RefIds: []
