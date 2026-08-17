@@ -58,6 +58,10 @@ MonoBehaviour:
     m_Localized: Press E to evoke a creature
     m_Metadata:
       m_Items: []
+  - m_Id: 81456237901234
+    m_Localized: 'Implementation of {0} →'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

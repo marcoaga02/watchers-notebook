@@ -55,6 +55,10 @@ MonoBehaviour:
     m_Key: ui.obstacle.press-to-evoke
     m_Metadata:
       m_Items: []
+  - m_Id: 81456237901234
+    m_Key: ui.implementation-of
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

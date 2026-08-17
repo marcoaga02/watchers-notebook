@@ -5,6 +5,7 @@ using UnityEngine.Localization;
 public class CapabilitySigil : ScriptableObject
 {
     public string interfaceName;
+    public string methodSignature;
     public LocalizedString displayName;
     public Sprite icon;
 }

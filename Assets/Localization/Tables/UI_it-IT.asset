@@ -58,6 +58,10 @@ MonoBehaviour:
     m_Localized: Premi E per evocare una creatura
     m_Metadata:
       m_Items: []
+  - m_Id: 81456237901234
+    m_Localized: 'Implementazione di {0} →'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

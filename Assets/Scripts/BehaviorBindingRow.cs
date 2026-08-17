@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
 
 public class BehaviorBindingRow : MonoBehaviour
 {
     [SerializeField] private TMP_Text capabilityLabel;
     [SerializeField] private TMP_Dropdown dropdown;
+    [SerializeField] private LocalizedString implementationOfFormat;
 
     public CapabilitySigil Capability { get; private set; }
     public Behavior SelectedBehavior { get; private set; }
@@ -19,7 +21,7 @@ public class BehaviorBindingRow : MonoBehaviour
     public void Setup(CapabilitySigil capability, IReadOnlyList<Behavior> availableBehaviors)
     {
         Capability = capability;
-        capabilityLabel.text = capability.displayName.GetLocalizedString();
+        capabilityLabel.text = implementationOfFormat.GetLocalizedString(capability.methodSignature);
         capabilityLabel.ForceMeshUpdate();
 
         _options = availableBehaviors.Where(behavior => behavior.Satisfies(capability)).ToList();

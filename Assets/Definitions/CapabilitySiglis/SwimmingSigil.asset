@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SwimmingSigil
   m_EditorClassIdentifier: Assembly-CSharp::CapabilitySigil
   interfaceName: ISwimmable
+  methodSignature: Swim()
   displayName:
     m_TableReference:
       m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
