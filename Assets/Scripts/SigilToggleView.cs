@@ -15,15 +15,12 @@ public class SigilToggleView : MonoBehaviour
 
     public event Action ValueChanged;
 
-    private void Awake()
-    {
-        _toggle = GetComponent<Toggle>();
-    }
-
     public void Setup(CapabilitySigil sigil)
     {
+        _toggle = GetComponent<Toggle>();
         Sigil = sigil;
         label.text = sigil.displayName.GetLocalizedString();
+        label.ForceMeshUpdate();
         _toggle.onValueChanged.AddListener(OnValueChanged);
     }
 

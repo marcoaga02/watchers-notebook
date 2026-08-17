@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -19,8 +20,9 @@ public class BehaviorBindingRow : MonoBehaviour
     {
         Capability = capability;
         capabilityLabel.text = capability.displayName.GetLocalizedString();
+        capabilityLabel.ForceMeshUpdate();
 
-        _options = new List<Behavior>(availableBehaviors);
+        _options = availableBehaviors.Where(behavior => behavior.satisfies == capability).ToList();
         dropdown.ClearOptions();
         dropdown.AddOptions(_options.ConvertAll(behavior => behavior.displayName.GetLocalizedString()));
         dropdown.onValueChanged.AddListener(OnDropdownChanged);

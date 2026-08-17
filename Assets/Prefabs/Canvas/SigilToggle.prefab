@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 2277171033035531446}
   - component: {fileID: 3034464372688895942}
   m_Layer: 5
-  m_Name: SigilTogglePrefab
+  m_Name: SigilToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -11,33 +11,28 @@ public class EvocationPanel : MonoBehaviour
     [SerializeField] private List<CreatureDefinition> knownSpecies = new();
     [SerializeField] private PossessionController possessionController;
 
-    [Header("Sigil selection")]
-    [SerializeField] private Transform sigilToggleContainer;
-    [SerializeField] private SigilToggleView sigilTogglePrefab;
+    [Header("Sigil composition")]
+    [SerializeField] private Transform sigilRowContainer;
+    [SerializeField] private SigilCompositionRow sigilRowPrefab;
 
     [Header("Matched creature")]
     [SerializeField] private TMP_Text matchedSpeciesLabel;
     [SerializeField] private LocalizedString matchedSpeciesPrefix;
 
-    [Header("Behavior binding")]
-    [SerializeField] private Transform bindingRowContainer;
-    [SerializeField] private BehaviorBindingRow bindingRowPrefab;
-
     [Header("Evocation")]
     [SerializeField] private Button evokeButton;
 
     private CreatureDefinition _matched;
-    private readonly List<BehaviorBindingRow> _rows = new();
-    private readonly List<SigilToggleView> _sigilToggles = new();
+    private readonly List<SigilCompositionRow> _sigilRows = new();
 
     private void OnEnable()
     {
         foreach (var sigil in inventory.CollectedSigils)
         {
-            var toggleView = Instantiate(sigilTogglePrefab, sigilToggleContainer);
-            toggleView.Setup(sigil);
-            toggleView.ValueChanged += Refresh;
-            _sigilToggles.Add(toggleView);
+            var row = Instantiate(sigilRowPrefab, sigilRowContainer);
+            row.Setup(sigil, inventory.CollectedBehaviors);
+            row.ValueChanged += Refresh;
+            _sigilRows.Add(row);
         }
 
         Refresh();
@@ -45,23 +40,25 @@ public class EvocationPanel : MonoBehaviour
 
     private void OnDisable()
     {
-        foreach (var toggleView in _sigilToggles)
+        foreach (var row in _sigilRows)
         {
-            toggleView.ValueChanged -= Refresh;
-            Destroy(toggleView.gameObject);
+            row.ValueChanged -= Refresh;
+            Destroy(row.gameObject);
         }
 
-        _sigilToggles.Clear();
-        ClearRows();
+        _sigilRows.Clear();
     }
 
     private void Refresh()
     {
-        var selected = _sigilToggles.Where(toggleView => toggleView.IsOn).Select(toggleView => toggleView.Sigil).ToList();
+        var selected = _sigilRows.Where(row => row.IsOn).Select(row => row.Sigil).ToList();
 
         _matched = knownSpecies.FirstOrDefault(species => species.MatchesExactly(selected));
 
-        ClearRows();
+        foreach (var row in _sigilRows)
+        {
+            row.SetBindingVisible(row.IsOn);
+        }
 
         if (_matched == null)
         {
@@ -73,31 +70,13 @@ public class EvocationPanel : MonoBehaviour
         matchedSpeciesLabel.gameObject.SetActive(true);
         matchedSpeciesLabel.text = $"{matchedSpeciesPrefix.GetLocalizedString()} {_matched.displayName.GetLocalizedString()}";
 
-        foreach (var capability in selected)
-        {
-            var row = Instantiate(bindingRowPrefab, bindingRowContainer);
-            row.Setup(capability, inventory.CollectedBehaviors);
-            row.SelectionChanged += UpdateEvokeButton;
-            _rows.Add(row);
-        }
-
         UpdateEvokeButton();
     }
 
     private void UpdateEvokeButton()
     {
-        evokeButton.interactable = _matched != null && _rows.All(row => row.SelectedBehavior != null);
-    }
-
-    private void ClearRows()
-    {
-        foreach (var row in _rows)
-        {
-            row.SelectionChanged -= UpdateEvokeButton;
-            Destroy(row.gameObject);
-        }
-
-        _rows.Clear();
+        var activeRows = _sigilRows.Where(row => row.IsOn);
+        evokeButton.interactable = _matched != null && activeRows.All(row => row.SelectedBehavior != null);
     }
 
     public void Evoke()
@@ -107,8 +86,8 @@ public class EvocationPanel : MonoBehaviour
             return;
         }
 
-        var bindings = _rows.Select(row =>
-            new KeyValuePair<CapabilitySigil, Behavior>(row.Capability, row.SelectedBehavior));
+        var bindings = _sigilRows.Where(row => row.IsOn)
+            .Select(row => new KeyValuePair<CapabilitySigil, Behavior>(row.Sigil, row.SelectedBehavior));
 
         possessionController.Evoke(_matched.prefab, bindings);
         gameObject.SetActive(false);
