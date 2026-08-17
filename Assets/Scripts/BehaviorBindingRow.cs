@@ -22,7 +22,7 @@ public class BehaviorBindingRow : MonoBehaviour
         capabilityLabel.text = capability.displayName.GetLocalizedString();
         capabilityLabel.ForceMeshUpdate();
 
-        _options = availableBehaviors.Where(behavior => behavior.satisfies == capability).ToList();
+        _options = availableBehaviors.Where(behavior => behavior.Satisfies(capability)).ToList();
         dropdown.ClearOptions();
         dropdown.AddOptions(_options.ConvertAll(behavior => behavior.displayName.GetLocalizedString()));
         dropdown.onValueChanged.AddListener(OnDropdownChanged);

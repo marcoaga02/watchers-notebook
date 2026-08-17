@@ -11,6 +11,6 @@ public class CapabilityBinding
 
     public bool Satisfies(CapabilitySigil capability)
     {
-        return _bound.TryGetValue(capability, out var behavior) && behavior.satisfies == capability;
+        return _bound.TryGetValue(capability, out var behavior) && behavior.Satisfies(capability);
     }
 }
