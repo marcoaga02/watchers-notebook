@@ -243,7 +243,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lizard
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1263309958128592845, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1040556143445320209, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
     - {fileID: 3471160246079603896, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
