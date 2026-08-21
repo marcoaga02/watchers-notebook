@@ -346,6 +346,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -144720843861087812, guid: 1f3b2632d0d1bef188092019dc3e8d90, type: 3}
+    - target: {fileID: 5626468129136398176, guid: 859de68ce2f0f4f228ba1877023b02d4, type: 3}
+      propertyPath: m_Padding.m_Bottom
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8059072664411526619, guid: 859de68ce2f0f4f228ba1877023b02d4, type: 3}
       propertyPath: m_SizeDelta.y
       value: 56.770004
@@ -443,7 +447,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 327791983953336683, guid: 859de68ce2f0f4f228ba1877023b02d4, type: 3}
       propertyPath: m_Color.a
-      value: 0.80784315
+      value: 0.9607843
       objectReference: {fileID: 0}
     - target: {fileID: 327791983953336683, guid: 859de68ce2f0f4f228ba1877023b02d4, type: 3}
       propertyPath: m_Color.b
@@ -597,6 +601,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4455660161002894880, guid: c34231f36a5575874ba025df8d85a533, type: 3}
+    - target: {fileID: 5626468129136398176, guid: 859de68ce2f0f4f228ba1877023b02d4, type: 3}
+      propertyPath: m_Padding.m_Bottom
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8059072664411526619, guid: 859de68ce2f0f4f228ba1877023b02d4, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -634,7 +642,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8059072664411526619, guid: 859de68ce2f0f4f228ba1877023b02d4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 652606899}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2015514043734835462, guid: 859de68ce2f0f4f228ba1877023b02d4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 791052777}
   m_SourcePrefab: {fileID: 100100000, guid: 859de68ce2f0f4f228ba1877023b02d4, type: 3}
 --- !u!224 &226715826 stripped
 RectTransform:
@@ -2427,7 +2438,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8.296875
+  orthographic size: 5.625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3092,6 +3103,7 @@ GameObject:
   - component: {fileID: 666539198}
   - component: {fileID: 666539201}
   - component: {fileID: 666539200}
+  - component: {fileID: 666539202}
   m_Layer: 5
   m_Name: CreatureSectionLabel
   m_TagString: Untagged
@@ -3218,6 +3230,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666539197}
   m_CullTransparentMesh: 1
+--- !u!114 &666539202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666539197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Components.LocalizeStringEvent
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
+    m_TableEntryReference:
+      m_KeyId: 1501569553793024
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 666539200}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &671120416
 GameObject:
   m_ObjectHideFlags: 0
@@ -4774,6 +4826,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700459540}
   m_CullTransparentMesh: 1
+--- !u!1 &791052773 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2015514043734835462, guid: 859de68ce2f0f4f228ba1877023b02d4, type: 3}
+  m_PrefabInstance: {fileID: 226715825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &791052777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791052773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e10522c628a14fdef80d0d2bf96a0184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NotebookPanel
+  inventory: {fileID: 1109860405}
+  creatureEntriesContainer: {fileID: 1583516287}
+  creatureEntryPrefab: {fileID: 7896781219542329625, guid: 4e47f7037fffcffb18a0b56dc4232fa7, type: 3}
+  interfaceEntriesContainer: {fileID: 608431082}
+  interfaceEntryPrefab: {fileID: 2617403990762076456, guid: 26f76eb10cc7f210da1574160c71a95a, type: 3}
 --- !u!1 &947390494
 GameObject:
   m_ObjectHideFlags: 0
@@ -5327,6 +5401,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7631737944568979446, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
+      propertyPath: observedSpecies.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7631737944568979446, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
+      propertyPath: 'observedSpecies.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: d5bfc4b21a0da535f90548f6201c978b, type: 2}
+    - target: {fileID: -7631737944568979446, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
+      propertyPath: 'observedSpecies.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: d8715ba34da3f763ab48d570abb01fa5, type: 2}
     - target: {fileID: 2158778763721800576, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30
@@ -5438,6 +5524,7 @@ GameObject:
   - component: {fileID: 1139130556}
   - component: {fileID: 1139130559}
   - component: {fileID: 1139130558}
+  - component: {fileID: 1139130560}
   m_Layer: 5
   m_Name: InterfaceSectionLabel
   m_TagString: Untagged
@@ -5564,6 +5651,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139130555}
   m_CullTransparentMesh: 1
+--- !u!114 &1139130560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139130555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Components.LocalizeStringEvent
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
+    m_TableEntryReference:
+      m_KeyId: 1501762143649792
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1139130558}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1199001675
 GameObject:
   m_ObjectHideFlags: 0

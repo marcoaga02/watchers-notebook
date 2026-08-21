@@ -67,11 +67,35 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 174498680406016
-    m_Localized: Interfacce
+    m_Localized: Interfacce disponibili
     m_Metadata:
       m_Items: []
   - m_Id: 175722427318272
     m_Localized: Creature disponibili
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1501569553793024
+    m_Localized: Creature Conosciute
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1501762143649792
+    m_Localized: Interfacce conosciute
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000001
+    m_Localized: 'Nome:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000002
+    m_Localized: 'Implementa:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000003
+    m_Localized: 'Implementata da:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000004
+    m_Localized: 'Implementazioni:'
     m_Metadata:
       m_Items: []
   references:

@@ -395,6 +395,27 @@ MonoBehaviour:
   icon: {fileID: 4062378000921461285}
   nameLabel: {fileID: 7922900115336014472}
   implementsLabel: {fileID: 5785737852698175885}
+  nameLabelFormat:
+    m_TableReference:
+      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
+    m_TableEntryReference:
+      m_KeyId: 1502000000000001
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  implementsLabelFormat:
+    m_TableReference:
+      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
+    m_TableEntryReference:
+      m_KeyId: 1502000000000002
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &8692784334326418692
 GameObject:
   m_ObjectHideFlags: 0

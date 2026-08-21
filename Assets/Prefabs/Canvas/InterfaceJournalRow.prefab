@@ -536,8 +536,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 6
-  m_fontSizeBase: 6
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -592,7 +592,6 @@ GameObject:
   - component: {fileID: 1473144964046244480}
   - component: {fileID: 5716989834156887895}
   - component: {fileID: 4671376350270138202}
-  - component: {fileID: 1996081512191557593}
   - component: {fileID: 2617403990762076456}
   m_Layer: 5
   m_Name: InterfaceJournalRow
@@ -656,21 +655,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1996081512191557593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8778457864078083454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaf594fddd3d6385cb9e5a46bca2af87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CreatureJournalRow
-  icon: {fileID: 2344223610318984135}
-  nameLabel: {fileID: 8549750234749277715}
-  implementsLabel: {fileID: 3243863507247733568}
 --- !u!114 &2617403990762076456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -687,3 +671,33 @@ MonoBehaviour:
   nameLabel: {fileID: 8549750234749277715}
   implementingCreaturesLabel: {fileID: 3243863507247733568}
   implementationsLabel: {fileID: 7234404182206432383}
+  nameLabelFormat:
+    m_TableReference:
+      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
+    m_TableEntryReference:
+      m_KeyId: 1502000000000001
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  implementersLabelFormat:
+    m_TableReference:
+      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
+    m_TableEntryReference:
+      m_KeyId: 1502000000000003
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  implementationsLabelFormat:
+    m_TableReference:
+      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
+    m_TableEntryReference:
+      m_KeyId: 1502000000000004
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
