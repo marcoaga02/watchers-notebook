@@ -67,11 +67,43 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 174498680406016
-    m_Localized: Interfaces
+    m_Localized: Available Interfaces
     m_Metadata:
       m_Items: []
   - m_Id: 175722427318272
     m_Localized: Available creatures
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1501569553793024
+    m_Localized: Known creatures
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1501762143649792
+    m_Localized: Known Interfaces
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000001
+    m_Localized: 'Name:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000002
+    m_Localized: 'Implements:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000003
+    m_Localized: 'Implemented by:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000004
+    m_Localized: 'Implementations:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000005
+    m_Localized: Notebook
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000006
+    m_Localized: Creature evocation
     m_Metadata:
       m_Items: []
   references:

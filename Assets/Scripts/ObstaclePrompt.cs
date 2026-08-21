@@ -6,6 +6,7 @@ public class ObstaclePrompt : MonoBehaviour
     [SerializeField] private KeyCode openKey = KeyCode.E;
     [SerializeField] private GameObject promptRoot;
     [SerializeField] private GameObject evocationPanel;
+    [SerializeField] private PanelManager panelManager;
     [SerializeField] private RectTransform canvasRect;
     [SerializeField] private PossessionController possessionController;
     [SerializeField] private Vector3 worldOffset = new(0f, 0.6f, 0f);
@@ -23,9 +24,21 @@ public class ObstaclePrompt : MonoBehaviour
 
     private void Update()
     {
-        if (evocationPanel.activeSelf || possessionController.IsPossessing)
+        if (evocationPanel.activeSelf || !panelManager.CanOpen(evocationPanel))
         {
             promptRoot.SetActive(false);
+            return;
+        }
+
+        if (possessionController.IsPossessing)
+        {
+            promptRoot.SetActive(false);
+
+            if (Input.GetKeyDown(openKey))
+            {
+                evocationPanel.SetActive(true);
+            }
+
             return;
         }
 
