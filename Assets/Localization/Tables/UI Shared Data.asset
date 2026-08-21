@@ -99,6 +99,14 @@ MonoBehaviour:
     m_Key: ui.label-implementations
     m_Metadata:
       m_Items: []
+  - m_Id: 1502000000000005
+    m_Key: ui.notebook-title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000006
+    m_Key: ui.evocation-title
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

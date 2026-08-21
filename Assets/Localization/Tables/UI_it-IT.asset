@@ -98,6 +98,14 @@ MonoBehaviour:
     m_Localized: 'Implementazioni:'
     m_Metadata:
       m_Items: []
+  - m_Id: 1502000000000005
+    m_Localized: Taccuino
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000006
+    m_Localized: Evocazione creatura
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
