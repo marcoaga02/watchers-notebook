@@ -7,9 +7,11 @@ public class PlayerInventory : MonoBehaviour
     // in the world exists; for now they are filled by hand in the Inspector.
     [SerializeField] private List<CapabilitySigil> collectedSigils = new();
     [SerializeField] private List<Behavior> collectedBehaviors = new();
+    [SerializeField] private List<CreatureDefinition> observedSpecies = new();
 
     public IReadOnlyList<CapabilitySigil> CollectedSigils => collectedSigils;
     public IReadOnlyList<Behavior> CollectedBehaviors => collectedBehaviors;
+    public IReadOnlyList<CreatureDefinition> ObservedSpecies => observedSpecies;
 
     public void Collect(CapabilitySigil sigil)
     {
@@ -24,6 +26,14 @@ public class PlayerInventory : MonoBehaviour
         if (!collectedBehaviors.Contains(behavior))
         {
             collectedBehaviors.Add(behavior);
+        }
+    }
+
+    public void Observe(CreatureDefinition species)
+    {
+        if (!observedSpecies.Contains(species))
+        {
+            observedSpecies.Add(species);
         }
     }
 }

@@ -533,6 +533,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SigilToggle
       objectReference: {fileID: 0}
+    - target: {fileID: 5996986431367875597, guid: 739fa730a37735bd2821f17fc7bd2521, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996986431367875597, guid: 739fa730a37735bd2821f17fc7bd2521, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996986431367875597, guid: 739fa730a37735bd2821f17fc7bd2521, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8824980087047183123, guid: 739fa730a37735bd2821f17fc7bd2521, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
