@@ -123,6 +123,10 @@ MonoBehaviour:
     m_Key: ui.no-implementations
     m_Metadata:
       m_Items: []
+  - m_Id: 1580731387871232
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
