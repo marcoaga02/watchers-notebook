@@ -426,6 +426,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2015514043734835462, guid: 859de68ce2f0f4f228ba1877023b02d4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 223801830}
+    - targetCorrespondingSourceObject: {fileID: 2015514043734835462, guid: 859de68ce2f0f4f228ba1877023b02d4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 223801834}
   m_SourcePrefab: {fileID: 100100000, guid: 859de68ce2f0f4f228ba1877023b02d4, type: 3}
 --- !u!224 &223801826 stripped
 RectTransform:
@@ -469,6 +472,18 @@ MonoBehaviour:
   creatureRow: {fileID: 346401733}
   noCreatureLabel: {fileID: 549174696}
   evokeButton: {fileID: 1950927096}
+--- !u!114 &223801834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223801829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3faacb9bc9ac0fa6f83486c13f2d2d96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CloseOnEscape
 --- !u!1001 &226715825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -714,6 +729,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2015514043734835462, guid: 859de68ce2f0f4f228ba1877023b02d4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 791052777}
+    - targetCorrespondingSourceObject: {fileID: 2015514043734835462, guid: 859de68ce2f0f4f228ba1877023b02d4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 791052781}
   m_SourcePrefab: {fileID: 100100000, guid: 859de68ce2f0f4f228ba1877023b02d4, type: 3}
 --- !u!224 &226715826 stripped
 RectTransform:
@@ -4905,6 +4923,7 @@ GameObject:
   - component: {fileID: 769201907}
   - component: {fileID: 769201906}
   - component: {fileID: 769201905}
+  - component: {fileID: 769201908}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -4926,6 +4945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NotebookToggle
   toggleKey: 9
   notebookPanel: {fileID: 791052773}
+  panelManager: {fileID: 769201908}
 --- !u!114 &769201906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4962,6 +4982,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &769201908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769201904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc2fb4371af5849980867c605cfa927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PanelManager
+  panels:
+  - {fileID: 223801829}
+  - {fileID: 791052773}
 --- !u!1 &791052773 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2015514043734835462, guid: 859de68ce2f0f4f228ba1877023b02d4, type: 3}
@@ -4984,6 +5019,18 @@ MonoBehaviour:
   creatureEntryPrefab: {fileID: 7896781219542329625, guid: 4e47f7037fffcffb18a0b56dc4232fa7, type: 3}
   interfaceEntriesContainer: {fileID: 608431082}
   interfaceEntryPrefab: {fileID: 2617403990762076456, guid: 26f76eb10cc7f210da1574160c71a95a, type: 3}
+--- !u!114 &791052781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791052773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3faacb9bc9ac0fa6f83486c13f2d2d96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CloseOnEscape
 --- !u!1 &947390494
 GameObject:
   m_ObjectHideFlags: 0
@@ -5577,6 +5624,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2945828378971451139, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
+      propertyPath: panelManager
+      value: 
+      objectReference: {fileID: 769201908}
     - target: {fileID: 5032833040746797690, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
       propertyPath: m_Name
       value: Man
@@ -5589,6 +5640,10 @@ PrefabInstance:
       propertyPath: promptRoot
       value: 
       objectReference: {fileID: 1548231595}
+    - target: {fileID: 5449695374316178015, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
+      propertyPath: panelManager
+      value: 
+      objectReference: {fileID: 769201908}
     - target: {fileID: 5449695374316178015, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
       propertyPath: evocationPanel
       value: 
