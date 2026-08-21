@@ -50,14 +50,6 @@ MonoBehaviour:
     m_Localized: 'Creature: '
     m_Metadata:
       m_Items: []
-  - m_Id: 74991351365632
-    m_Localized: Obstacle detected
-    m_Metadata:
-      m_Items: []
-  - m_Id: 75143294222336
-    m_Localized: Press E to evoke a creature
-    m_Metadata:
-      m_Items: []
   - m_Id: 81456237901234
     m_Localized: "Implementation of {0} \u2192"
     m_Metadata:
@@ -104,6 +96,34 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1502000000000006
     m_Localized: Creature evocation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000007
+    m_Localized: Float
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000008
+    m_Localized: Fast swim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000009
+    m_Localized: Spin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000010
+    m_Localized: Fast fly
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000011
+    m_Localized: 'Found: {0} (Press E to collect)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000012
+    m_Localized: Obstacle detected (Press E to evoke a creature)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000013
+    m_Localized: No implementations found
     m_Metadata:
       m_Items: []
   references:

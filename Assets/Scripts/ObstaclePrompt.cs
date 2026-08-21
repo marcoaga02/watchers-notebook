@@ -1,38 +1,36 @@
 using UnityEngine;
+using UnityEngine.Localization;
 
 [RequireComponent(typeof(CreatureMover))]
 public class ObstaclePrompt : MonoBehaviour
 {
     [SerializeField] private KeyCode openKey = KeyCode.E;
-    [SerializeField] private GameObject promptRoot;
+    [SerializeField] private LocalizedString promptText;
     [SerializeField] private GameObject evocationPanel;
     [SerializeField] private PanelManager panelManager;
-    [SerializeField] private RectTransform canvasRect;
     [SerializeField] private PossessionController possessionController;
-    [SerializeField] private Vector3 worldOffset = new(0f, 0.6f, 0f);
 
     private CreatureMover _mover;
-    private RectTransform _promptRect;
-    private Camera _camera;
+    private string _resolvedPromptText;
+    private bool _isShowingPrompt;
 
     private void Awake()
     {
         _mover = GetComponent<CreatureMover>();
-        _promptRect = promptRoot.GetComponent<RectTransform>();
-        _camera = Camera.main;
+        _resolvedPromptText = promptText.GetLocalizedString();
     }
 
     private void Update()
     {
         if (evocationPanel.activeSelf || !panelManager.CanOpen(evocationPanel))
         {
-            promptRoot.SetActive(false);
+            HidePrompt();
             return;
         }
 
         if (possessionController.IsPossessing)
         {
-            promptRoot.SetActive(false);
+            HidePrompt();
 
             if (Input.GetKeyDown(openKey))
             {
@@ -44,26 +42,41 @@ public class ObstaclePrompt : MonoBehaviour
 
         var aheadPosition = transform.position + (Vector3)_mover.Facing;
         var required = TerrainProbe.Instance.GetRequiredCapability(aheadPosition);
-        var showPrompt = required != null;
 
-        promptRoot.SetActive(showPrompt);
-
-        if (showPrompt)
+        if (required == null)
         {
-            FollowPlayer();
+            HidePrompt();
+            return;
+        }
 
-            if (Input.GetKeyDown(openKey))
-            {
-                evocationPanel.SetActive(true);
-                promptRoot.SetActive(false);
-            }
+        ShowPrompt();
+
+        if (Input.GetKeyDown(openKey))
+        {
+            evocationPanel.SetActive(true);
+            HidePrompt();
         }
     }
 
-    private void FollowPlayer()
+    private void ShowPrompt()
     {
-        var screenPoint = _camera.WorldToScreenPoint(transform.position + worldOffset);
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, screenPoint, null, out var localPoint);
-        _promptRect.anchoredPosition = localPoint;
+        if (_isShowingPrompt)
+        {
+            return;
+        }
+
+        _isShowingPrompt = true;
+        WorldPrompt.Instance.Show(_resolvedPromptText, transform);
+    }
+
+    private void HidePrompt()
+    {
+        if (!_isShowingPrompt)
+        {
+            return;
+        }
+
+        _isShowingPrompt = false;
+        WorldPrompt.Instance.Hide();
     }
 }

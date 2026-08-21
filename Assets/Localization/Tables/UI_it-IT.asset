@@ -50,14 +50,6 @@ MonoBehaviour:
     m_Localized: 'Creatura: '
     m_Metadata:
       m_Items: []
-  - m_Id: 74991351365632
-    m_Localized: Ostacolo rilevato
-    m_Metadata:
-      m_Items: []
-  - m_Id: 75143294222336
-    m_Localized: Premi E per evocare una creatura
-    m_Metadata:
-      m_Items: []
   - m_Id: 81456237901234
     m_Localized: "Implementazione di {0} \u2192"
     m_Metadata:
@@ -104,6 +96,34 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1502000000000006
     m_Localized: Evocazione creatura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000007
+    m_Localized: Galleggia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000008
+    m_Localized: Nuota veloce
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000009
+    m_Localized: Ruota
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000010
+    m_Localized: Vola veloce
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000011
+    m_Localized: 'Trovato: {0} (Premi E per raccogliere)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000012
+    m_Localized: Ostacolo rilevato (Premi E per evocare una creatura)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000013
+    m_Localized: Nessuna implementazione trovata
     m_Metadata:
       m_Items: []
   references:

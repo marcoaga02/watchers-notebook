@@ -47,14 +47,6 @@ MonoBehaviour:
     m_Key: ui.creature-prefix
     m_Metadata:
       m_Items: []
-  - m_Id: 74991351365632
-    m_Key: ui.obstacle.detected
-    m_Metadata:
-      m_Items: []
-  - m_Id: 75143294222336
-    m_Key: ui.obstacle.press-to-evoke
-    m_Metadata:
-      m_Items: []
   - m_Id: 81456237901234
     m_Key: ui.implementation-of
     m_Metadata:
@@ -69,10 +61,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 175722427318272
     m_Key: ui.creature-section-label
-    m_Metadata:
-      m_Items: []
-  - m_Id: 178137142657024
-    m_Key: New Entry
     m_Metadata:
       m_Items: []
   - m_Id: 1501569553793024
@@ -105,6 +93,38 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1502000000000006
     m_Key: ui.evocation-title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000007
+    m_Key: behavior.float
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000008
+    m_Key: behavior.swim-fast
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000009
+    m_Key: behavior.spin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000010
+    m_Key: behavior.fly-fast
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000011
+    m_Key: ui.pickup-prompt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000012
+    m_Key: ui.obstacle-prompt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000013
+    m_Key: ui.no-implementations
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1580731387871232
+    m_Key: New Entry
     m_Metadata:
       m_Items: []
   m_Metadata:

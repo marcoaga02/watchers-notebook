@@ -78,9 +78,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 145828413
+  m_SortingLayer: 5
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2623127153346953542, guid: dd9c400f5840a469b852cf61fb95ad19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -128,7 +128,6 @@ GameObject:
   - component: {fileID: 1006156585888668818}
   - component: {fileID: 6646013415374080978}
   - component: {fileID: 154587497355107480}
-  - component: {fileID: 370123921708527123}
   m_Layer: 0
   m_Name: Elf
   m_TagString: Untagged
@@ -279,21 +278,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Creature
   definition: {fileID: 11400000, guid: d8715ba34da3f763ab48d570abb01fa5, type: 2}
-  testBindings:
-  - capability: {fileID: 11400000, guid: bad63adb0247baae5bf7a14f5cf16774, type: 2}
-    behavior: {fileID: 11400000, guid: 8ad53774f0000c8a2bbdeb903cd02ec0, type: 2}
---- !u!114 &370123921708527123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5988747505045219203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c31bf59fbb37852abaa448a6ea393ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
 --- !u!1 &7647016119814585077
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,9 +355,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingLayerID: 145828413
+  m_SortingLayer: 5
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
