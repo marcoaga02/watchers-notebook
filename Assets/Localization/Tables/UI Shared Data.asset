@@ -107,6 +107,22 @@ MonoBehaviour:
     m_Key: ui.evocation-title
     m_Metadata:
       m_Items: []
+  - m_Id: 1502000000000007
+    m_Key: behavior.float
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000008
+    m_Key: behavior.swim-fast
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000009
+    m_Key: behavior.spin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000010
+    m_Key: behavior.fly-fast
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

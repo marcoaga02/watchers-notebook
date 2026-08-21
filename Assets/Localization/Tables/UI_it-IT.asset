@@ -106,6 +106,22 @@ MonoBehaviour:
     m_Localized: Evocazione creatura
     m_Metadata:
       m_Items: []
+  - m_Id: 1502000000000007
+    m_Localized: Galleggia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000008
+    m_Localized: Nuota veloce
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000009
+    m_Localized: Ruota
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000010
+    m_Localized: Vola veloce
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

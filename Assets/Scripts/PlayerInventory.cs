@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    // TODO: remove these serialized lists once collecting Sigils/Behaviors
-    // in the world exists; for now they are filled by hand in the Inspector.
+    public static PlayerInventory Instance { get; private set; }
+
     [SerializeField] private List<CapabilitySigil> collectedSigils = new();
     [SerializeField] private List<Behavior> collectedBehaviors = new();
     [SerializeField] private List<CreatureDefinition> observedSpecies = new();
@@ -12,6 +12,11 @@ public class PlayerInventory : MonoBehaviour
     public IReadOnlyList<CapabilitySigil> CollectedSigils => collectedSigils;
     public IReadOnlyList<Behavior> CollectedBehaviors => collectedBehaviors;
     public IReadOnlyList<CreatureDefinition> ObservedSpecies => observedSpecies;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     public void Collect(CapabilitySigil sigil)
     {

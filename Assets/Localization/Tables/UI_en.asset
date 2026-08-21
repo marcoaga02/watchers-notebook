@@ -106,6 +106,22 @@ MonoBehaviour:
     m_Localized: Creature evocation
     m_Metadata:
       m_Items: []
+  - m_Id: 1502000000000007
+    m_Localized: Float
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000008
+    m_Localized: Fast swim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000009
+    m_Localized: Spin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000010
+    m_Localized: Fast fly
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
