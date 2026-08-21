@@ -115,15 +115,33 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000011
-    m_Localized: 'Trovato: {0} (Premi E per raccogliere)'
+    m_Localized: 'Interfaccia {0}
+
+      (Premi E per raccogliere)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000014
+    m_Localized: 'Implementazione: {0}
+
+      (Premi E per raccogliere)'
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000012
-    m_Localized: Ostacolo rilevato (Premi E per evocare una creatura)
+    m_Localized: 'Ostacolo rilevato
+
+      (Premi E per evocare una creatura)'
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000013
     m_Localized: Nessuna implementazione trovata
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000015
+    m_Localized: Nessuna creatura osservata
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000016
+    m_Localized: Nessuna interfaccia raccolta
     m_Metadata:
       m_Items: []
   references:

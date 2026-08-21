@@ -1,16 +1,14 @@
 using UnityEngine;
-using UnityEngine.Localization;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public abstract class Pickup : MonoBehaviour
 {
     [SerializeField] private KeyCode collectKey = KeyCode.E;
-    [SerializeField] private LocalizedString promptFormat;
 
     private bool _playerInRange;
 
     protected abstract Sprite Icon { get; }
-    protected abstract string ItemName { get; }
+    protected abstract string PromptText { get; }
     protected abstract void Collect();
 
     private void Awake()
@@ -49,7 +47,7 @@ public abstract class Pickup : MonoBehaviour
         }
 
         _playerInRange = true;
-        WorldPrompt.Instance.Show(promptFormat.GetLocalizedString(ItemName), other.transform);
+        WorldPrompt.Instance.Show(PromptText, other.transform);
     }
 
     private void OnTriggerExit2D(Collider2D other)

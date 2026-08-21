@@ -115,15 +115,33 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000011
-    m_Localized: 'Found: {0} (Press E to collect)'
+    m_Localized: 'Interface {0}
+
+      (Press E to collect)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000014
+    m_Localized: 'Implementation: {0}
+
+      (Press E to collect)'
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000012
-    m_Localized: Obstacle detected (Press E to evoke a creature)
+    m_Localized: 'Obstacle detected
+
+      (Press E to evoke a creature)'
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000013
     m_Localized: No implementations found
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000015
+    m_Localized: No creatures observed yet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000016
+    m_Localized: No interfaces collected yet
     m_Metadata:
       m_Items: []
   references:

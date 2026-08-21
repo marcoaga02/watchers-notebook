@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class EvocationPanel : MonoBehaviour
 {
     [SerializeField] private PlayerInventory inventory;
-    [SerializeField] private List<CreatureDefinition> knownSpecies = new();
     [SerializeField] private PossessionController possessionController;
 
     [Header("Sigil composition")]
@@ -52,7 +51,7 @@ public class EvocationPanel : MonoBehaviour
     {
         var selected = _sigilRows.Where(row => row.IsOn).Select(row => row.Sigil).ToList();
 
-        _matched = knownSpecies.FirstOrDefault(species => species.MatchesExactly(selected));
+        _matched = inventory.ObservedSpecies.FirstOrDefault(species => species.MatchesExactly(selected));
 
         foreach (var row in _sigilRows)
         {

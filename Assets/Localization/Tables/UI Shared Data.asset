@@ -112,7 +112,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000011
-    m_Key: ui.pickup-prompt
+    m_Key: ui.sigil-pickup-prompt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000014
+    m_Key: ui.behavior-pickup-prompt
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000012
@@ -123,8 +127,12 @@ MonoBehaviour:
     m_Key: ui.no-implementations
     m_Metadata:
       m_Items: []
-  - m_Id: 1580731387871232
-    m_Key: New Entry
+  - m_Id: 1502000000000015
+    m_Key: ui.no-creatures-observed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000016
+    m_Key: ui.no-interfaces-collected
     m_Metadata:
       m_Items: []
   m_Metadata:

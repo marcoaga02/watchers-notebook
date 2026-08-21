@@ -86,16 +86,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BehaviorPickup
   collectKey: 101
+  behavior: {fileID: 0}
   promptFormat:
     m_TableReference:
       m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
     m_TableEntryReference:
-      m_KeyId: 1502000000000011
+      m_KeyId: 1502000000000014
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  behavior: {fileID: 0}
   references:
     version: 2
     RefIds: []
