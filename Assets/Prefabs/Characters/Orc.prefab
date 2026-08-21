@@ -78,9 +78,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: 145828413
+  m_SortingLayer: 5
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3145328045451892686, guid: 085da1586b294e5888df71507f90be74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -242,6 +242,7 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 6491926555215746539}
   _animator: {fileID: 8885522909749678423}
   creature: {fileID: 347444026099274749}
+  hasDirectionalSprites: 1
 --- !u!114 &2744868706651540842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +264,7 @@ MonoBehaviour:
   groundY: -0.025
   maskSubmergedY: 1
   maskDryY: 0
+  flyingShadowScale: 0.6
   lerpSpeed: 12
 --- !u!114 &347444026099274749
 MonoBehaviour:
@@ -445,9 +447,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingLayerID: 145828413
+  m_SortingLayer: 5
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}

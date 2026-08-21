@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7030411182489095282}
   - component: {fileID: 2694876429060459171}
   - component: {fileID: 7101559396396388186}
+  - component: {fileID: 7602202508491254302}
   m_Layer: 0
   m_Name: PickubleComponent
   m_TagString: Untagged
@@ -78,8 +79,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1228023101
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
@@ -129,3 +130,17 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5, y: 1}
   m_Direction: 0
+--- !u!114 &7602202508491254302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040006931136866795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1dde03237ca12cd6bb1d5cc484cf9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Bobbing
+  amplitude: 0.1
+  speed: 2

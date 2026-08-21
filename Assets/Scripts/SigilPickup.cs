@@ -1,23 +1,14 @@
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer))]
-public class SigilPickup : MonoBehaviour
+public class SigilPickup : Pickup
 {
     [SerializeField] private CapabilitySigil sigil;
 
-    private void Awake()
-    {
-        GetComponent<SpriteRenderer>().sprite = sigil.icon;
-    }
+    protected override Sprite Icon => sigil != null ? sigil.icon : null;
+    protected override string ItemName => sigil != null ? sigil.interfaceName : string.Empty;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    protected override void Collect()
     {
-        if (!other.TryGetComponent<PlayerInput>(out _))
-        {
-            return;
-        }
-
         PlayerInventory.Instance.Collect(sigil);
-        Destroy(gameObject);
     }
 }

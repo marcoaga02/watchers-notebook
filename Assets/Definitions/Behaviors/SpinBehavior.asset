@@ -17,11 +17,11 @@ MonoBehaviour:
       m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
     m_TableEntryReference:
       m_KeyId: 1502000000000009
-      m_Key:
+      m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  icon: {fileID: 0}
+  icon: {fileID: -2620908129142257650, guid: 2bfdeb79a795aaa7eb0e0dc5f3b4637c, type: 3}
   satisfies: {fileID: 11400000, guid: bad63adb0247baae5bf7a14f5cf16774, type: 2}
   references:
     version: 2

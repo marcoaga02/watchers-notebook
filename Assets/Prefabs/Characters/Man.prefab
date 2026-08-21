@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4136981748316391630
+--- !u!1001 &2003970290517682709
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 820237368963251157, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: _animator
       value: 
-      objectReference: {fileID: 2355447323020868097}
+      objectReference: {fileID: 150360946359916762}
     - target: {fileID: 820237368963251157, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: hasDirectionalSprites
       value: 1
@@ -68,6 +68,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 6699638555593420609, guid: 464c7b409bf3012f7b963e4a07e6c23b, type: 3}
+    - target: {fileID: 3592138512623344584, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592138512623344584, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592138512623344584, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 145828413
+      objectReference: {fileID: 0}
     - target: {fileID: 5609683809984856905, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: shadow
       value: 
@@ -106,7 +118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8985160675770995380, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_Name
-      value: Man
+      value: Man 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5609683809984856905, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
@@ -117,41 +129,41 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8985160675770995380, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7781698519129343351}
+      addedObject: {fileID: 3494396364108316922}
     - targetCorrespondingSourceObject: {fileID: 8985160675770995380, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5449695374316178015}
+      addedObject: {fileID: 3076504636192606311}
   m_SourcePrefab: {fileID: 100100000, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
---- !u!95 &2355447323020868097 stripped
+--- !u!95 &150360946359916762 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1862722400439890639, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
-  m_PrefabInstance: {fileID: 4136981748316391630}
+  m_PrefabInstance: {fileID: 2003970290517682709}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5032833040746797690 stripped
+--- !u!1 &7457464398330575009 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8985160675770995380, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
-  m_PrefabInstance: {fileID: 4136981748316391630}
+  m_PrefabInstance: {fileID: 2003970290517682709}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7781698519129343351
+--- !u!114 &3494396364108316922
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5032833040746797690}
+  m_GameObject: {fileID: 7457464398330575009}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 492998359fb83f9b28ac1c8c69c1139c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PossessionController
   spawnDistance: 1
---- !u!114 &5449695374316178015
+--- !u!114 &3076504636192606311
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5032833040746797690}
+  m_GameObject: {fileID: 7457464398330575009}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6b9a8368274f989f91417d82bb06aab, type: 3}
@@ -160,6 +172,7 @@ MonoBehaviour:
   openKey: 101
   promptRoot: {fileID: 0}
   evocationPanel: {fileID: 0}
+  panelManager: {fileID: 0}
   canvasRect: {fileID: 0}
-  possessionController: {fileID: 7781698519129343351}
+  possessionController: {fileID: 3494396364108316922}
   worldOffset: {x: 0, y: 1.2, z: 0}
