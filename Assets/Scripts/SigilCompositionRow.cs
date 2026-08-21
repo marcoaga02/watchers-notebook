@@ -1,17 +1,21 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SigilCompositionRow : MonoBehaviour
 {
     [SerializeField] private SigilToggleView toggleView;
     [SerializeField] private BehaviorBindingRow bindingRow;
+    [SerializeField] private GameObject noImplementationsLabel;
 
     public CapabilitySigil Sigil => toggleView.Sigil;
     public bool IsOn => toggleView.IsOn;
     public Behavior SelectedBehavior => bindingRow.SelectedBehavior;
 
     public event Action ValueChanged;
+
+    private bool _hasImplementations;
 
     public void Setup(CapabilitySigil sigil, IReadOnlyList<Behavior> availableBehaviors)
     {
@@ -21,12 +25,15 @@ public class SigilCompositionRow : MonoBehaviour
         bindingRow.Setup(sigil, availableBehaviors);
         bindingRow.SelectionChanged += HandleChanged;
 
-        bindingRow.gameObject.SetActive(false);
+        _hasImplementations = availableBehaviors.Any(behavior => behavior.Satisfies(sigil));
+
+        SetBindingVisible(false);
     }
 
     public void SetBindingVisible(bool visible)
     {
-        bindingRow.gameObject.SetActive(visible);
+        bindingRow.gameObject.SetActive(visible && _hasImplementations);
+        noImplementationsLabel.SetActive(visible && !_hasImplementations);
     }
 
     private void OnDestroy()

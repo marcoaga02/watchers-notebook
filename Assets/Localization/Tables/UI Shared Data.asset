@@ -119,6 +119,10 @@ MonoBehaviour:
     m_Key: ui.obstacle-prompt
     m_Metadata:
       m_Items: []
+  - m_Id: 1502000000000013
+    m_Key: ui.no-implementations
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -122,6 +122,10 @@ MonoBehaviour:
     m_Localized: Ostacolo rilevato (Premi E per evocare una creatura)
     m_Metadata:
       m_Items: []
+  - m_Id: 1502000000000013
+    m_Localized: Nessuna implementazione trovata
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

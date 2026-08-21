@@ -497,6 +497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BehaviorBindingRow
   capabilityLabel: {fileID: 1411869875299338912}
   dropdown: {fileID: 7003809760725929455}
+  noImplementationsLabel: {fileID: 0}
   implementationOfFormat:
     m_TableReference:
       m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
@@ -528,8 +529,8 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 3
   m_Spacing: 10
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
