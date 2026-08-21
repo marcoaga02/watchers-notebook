@@ -4317,7 +4317,7 @@ TextureImporter:
         serializedVersion: 2
         x: 652
         y: 2303
-        width: 37
+        width: 36
         height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -4361,7 +4361,7 @@ TextureImporter:
         serializedVersion: 2
         x: 780
         y: 2303
-        width: 37
+        width: 36
         height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -4557,9 +4557,9 @@ TextureImporter:
       name: old-man_154
       rect:
         serializedVersion: 2
-        x: 528
+        x: 529
         y: 2239
-        width: 30
+        width: 29
         height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -4887,9 +4887,9 @@ TextureImporter:
       name: old-man_169
       rect:
         serializedVersion: 2
-        x: 655
+        x: 656
         y: 2175
-        width: 37
+        width: 36
         height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -4931,9 +4931,9 @@ TextureImporter:
       name: old-man_171
       rect:
         serializedVersion: 2
-        x: 783
+        x: 784
         y: 2175
-        width: 37
+        width: 36
         height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
