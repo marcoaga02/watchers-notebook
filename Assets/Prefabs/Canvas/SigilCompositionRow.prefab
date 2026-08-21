@@ -67,7 +67,7 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 1
   m_Spacing: 2
-  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
@@ -96,6 +96,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6353629417665044136}
     m_Modifications:
+    - target: {fileID: -6406882432588884393, guid: b8bf5b0772d0763959b59e19a3e87574, type: 3}
+      propertyPath: m_Padding.m_Left
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: -6406882432588884393, guid: b8bf5b0772d0763959b59e19a3e87574, type: 3}
       propertyPath: m_ChildControlWidth
       value: 1
@@ -131,6 +135,10 @@ PrefabInstance:
     - target: {fileID: 1411869875299338912, guid: b8bf5b0772d0763959b59e19a3e87574, type: 3}
       propertyPath: m_fontSizeBase
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411869875299338912, guid: b8bf5b0772d0763959b59e19a3e87574, type: 3}
+      propertyPath: m_overflowMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1707628312363703359, guid: b8bf5b0772d0763959b59e19a3e87574, type: 3}
       propertyPath: m_SizeDelta.x
@@ -270,7 +278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5008140251762890100, guid: b8bf5b0772d0763959b59e19a3e87574, type: 3}
       propertyPath: m_PreferredWidth
-      value: 50
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 6139711960809285974, guid: b8bf5b0772d0763959b59e19a3e87574, type: 3}
       propertyPath: m_Pivot.x
@@ -459,11 +467,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1061250065881616881, guid: 739fa730a37735bd2821f17fc7bd2521, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 96.9
+      value: 65.94565
       objectReference: {fileID: 0}
     - target: {fileID: 1061250065881616881, guid: 739fa730a37735bd2821f17fc7bd2521, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 5
+      value: 5.59
       objectReference: {fileID: 0}
     - target: {fileID: 1061250065881616881, guid: 739fa730a37735bd2821f17fc7bd2521, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -499,6 +507,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2277171033035531446, guid: 739fa730a37735bd2821f17fc7bd2521, type: 3}
       propertyPath: m_ChildControlWidth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2277171033035531446, guid: 739fa730a37735bd2821f17fc7bd2521, type: 3}
+      propertyPath: m_ChildForceExpandWidth
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3052256687623128766, guid: 739fa730a37735bd2821f17fc7bd2521, type: 3}
