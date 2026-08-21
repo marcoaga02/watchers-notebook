@@ -467,9 +467,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EvocationPanel
   inventory: {fileID: 769201906}
-  knownSpecies:
-  - {fileID: 11400000, guid: d5bfc4b21a0da535f90548f6201c978b, type: 2}
-  - {fileID: 11400000, guid: d8715ba34da3f763ab48d570abb01fa5, type: 2}
   possessionController: {fileID: 7781698518087132484}
   sigilRowContainer: {fileID: 70402308}
   sigilRowPrefab: {fileID: 2013290186760502694, guid: 23e66a70cf4d94a5388be3e2e8e34130, type: 3}
@@ -5148,10 +5145,10 @@ MonoBehaviour:
   inventory: {fileID: 769201906}
   creatureEntriesContainer: {fileID: 1583516287}
   creatureEntryPrefab: {fileID: 7896781219542329625, guid: 4e47f7037fffcffb18a0b56dc4232fa7, type: 3}
-  noCreaturesLabel: {fileID: 0}
+  noCreaturesLabel: {fileID: 1791124452}
   interfaceEntriesContainer: {fileID: 608431082}
   interfaceEntryPrefab: {fileID: 2617403990762076456, guid: 26f76eb10cc7f210da1574160c71a95a, type: 3}
-  noInterfacesLabel: {fileID: 0}
+  noInterfacesLabel: {fileID: 1870811571}
 --- !u!114 &791052781
 MonoBehaviour:
   m_ObjectHideFlags: 0
