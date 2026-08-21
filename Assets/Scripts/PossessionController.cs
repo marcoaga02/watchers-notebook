@@ -6,7 +6,6 @@ using UnityEngine;
 public class PossessionController : MonoBehaviour
 {
     [SerializeField] private float spawnDistance = 1f;
-    [SerializeField] private KeyCode cancelKey = KeyCode.Escape;
 
     private CreatureMover _playerMover;
     private PlayerInput _playerInput;
@@ -28,12 +27,6 @@ public class PossessionController : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(cancelKey))
-        {
-            Return();
-            return;
-        }
-
         var required = TerrainProbe.Instance.GetRequiredCapability(_possessed.transform.position);
         if (required != null)
         {
@@ -47,12 +40,15 @@ public class PossessionController : MonoBehaviour
 
     public void Evoke(GameObject creaturePrefab, IEnumerable<KeyValuePair<CapabilitySigil, Behavior>> bindings)
     {
+        var spawnPosition = _possessed != null
+            ? _possessed.transform.position
+            : _playerMover.transform.position + (Vector3)(_playerMover.Facing * spawnDistance);
+
         if (_possessed != null)
         {
-            return;
+            Destroy(_possessed.gameObject);
         }
 
-        var spawnPosition = _playerMover.transform.position + (Vector3)(_playerMover.Facing * spawnDistance);
         var instance = Instantiate(creaturePrefab, spawnPosition, Quaternion.identity);
         _possessed = instance.GetComponent<CreatureMover>();
         _hasLeftGround = false;

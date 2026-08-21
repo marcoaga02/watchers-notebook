@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fadd28f386b5a1bf485504bbbf0f7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EvocationPanel
-  inventory: {fileID: 1109860405}
+  inventory: {fileID: 769201906}
   knownSpecies:
   - {fileID: 11400000, guid: d5bfc4b21a0da535f90548f6201c978b, type: 2}
   - {fileID: 11400000, guid: d8715ba34da3f763ab48d570abb01fa5, type: 2}
@@ -4894,6 +4894,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700459540}
   m_CullTransparentMesh: 1
+--- !u!1 &769201904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 769201907}
+  - component: {fileID: 769201906}
+  - component: {fileID: 769201905}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &769201905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769201904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8bdbdad0578d73bb9eddefa610e8471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NotebookToggle
+  toggleKey: 9
+  notebookPanel: {fileID: 791052773}
+--- !u!114 &769201906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769201904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54231ec6aa5e9054ab27a5cf26560068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
+  collectedSigils:
+  - {fileID: 11400000, guid: 84a6966185a93dca782cc635144cfd03, type: 2}
+  - {fileID: 11400000, guid: bad63adb0247baae5bf7a14f5cf16774, type: 2}
+  collectedBehaviors:
+  - {fileID: 11400000, guid: 6f46c9b9e91385e609ba973cc0098dda, type: 2}
+  - {fileID: 11400000, guid: 8ad53774f0000c8a2bbdeb903cd02ec0, type: 2}
+  observedSpecies:
+  - {fileID: 11400000, guid: d5bfc4b21a0da535f90548f6201c978b, type: 2}
+  - {fileID: 11400000, guid: d8715ba34da3f763ab48d570abb01fa5, type: 2}
+--- !u!4 &769201907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769201904}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 447.48935, y: 250.0404, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &791052773 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2015514043734835462, guid: 859de68ce2f0f4f228ba1877023b02d4, type: 3}
@@ -4911,7 +4979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10522c628a14fdef80d0d2bf96a0184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NotebookPanel
-  inventory: {fileID: 1109860405}
+  inventory: {fileID: 769201906}
   creatureEntriesContainer: {fileID: 1583516287}
   creatureEntryPrefab: {fileID: 7896781219542329625, guid: 4e47f7037fffcffb18a0b56dc4232fa7, type: 3}
   interfaceEntriesContainer: {fileID: 608431082}
@@ -5469,18 +5537,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -7631737944568979446, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
-      propertyPath: observedSpecies.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -7631737944568979446, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
-      propertyPath: 'observedSpecies.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: d5bfc4b21a0da535f90548f6201c978b, type: 2}
-    - target: {fileID: -7631737944568979446, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
-      propertyPath: 'observedSpecies.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: d8715ba34da3f763ab48d570abb01fa5, type: 2}
     - target: {fileID: 2158778763721800576, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30
@@ -5534,21 +5590,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1548231595}
     - target: {fileID: 5449695374316178015, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
-      propertyPath: worldOffset.y
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5449695374316178015, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
       propertyPath: evocationPanel
       value: 
       objectReference: {fileID: 223801829}
-    - target: {fileID: 5449695374316178015, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
-      propertyPath: possessionController
-      value: 
-      objectReference: {fileID: 1109860406}
-    - target: {fileID: 7781698519129343351, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
-      propertyPath: cameraFollow
-      value: 
-      objectReference: {fileID: 519420033}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5559,17 +5603,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2158778763721800576, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
   m_PrefabInstance: {fileID: 1109860403}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1109860405 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -7631737944568979446, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
-  m_PrefabInstance: {fileID: 1109860403}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54231ec6aa5e9054ab27a5cf26560068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
 --- !u!114 &1109860406 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7781698519129343351, guid: 9963830565a11b7a49794fa27c55c102, type: 3}
@@ -49342,8 +49375,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 223801826}
-  - {fileID: 1548231596}
   - {fileID: 226715826}
+  - {fileID: 1548231596}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -49361,3 +49394,4 @@ SceneRoots:
   - {fileID: 1109860403}
   - {fileID: 2111823826}
   - {fileID: 2006320105}
+  - {fileID: 769201907}

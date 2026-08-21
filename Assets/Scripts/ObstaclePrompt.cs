@@ -23,9 +23,21 @@ public class ObstaclePrompt : MonoBehaviour
 
     private void Update()
     {
-        if (evocationPanel.activeSelf || possessionController.IsPossessing)
+        if (evocationPanel.activeSelf)
         {
             promptRoot.SetActive(false);
+            return;
+        }
+
+        if (possessionController.IsPossessing)
+        {
+            promptRoot.SetActive(false);
+
+            if (Input.GetKeyDown(openKey))
+            {
+                evocationPanel.SetActive(true);
+            }
+
             return;
         }
 
