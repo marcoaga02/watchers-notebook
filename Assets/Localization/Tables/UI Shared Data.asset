@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UI Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: UI
+  m_TableCollectionNameGuidString: a3934c22933ed1fd688b94cdb220f1e6
+  m_Entries:
+  - m_Id: 1181243670528
+    m_Key: sigil.swimming
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1423389229056
+    m_Key: sigil.flying
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1757905944576
+    m_Key: behavior.fly
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1928991604736
+    m_Key: behavior.swim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11629091356672
+    m_Key: creature.diver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11844175265792
+    m_Key: creature.glider
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20296276639744
+    m_Key: ui.evoke-button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32908322275328
+    m_Key: ui.creature-prefix
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74991351365632
+    m_Key: ui.obstacle.detected
+    m_Metadata:
+      m_Items: []
+  - m_Id: 75143294222336
+    m_Key: ui.obstacle.press-to-evoke
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81456237901234
+    m_Key: ui.implementation-of
+    m_Metadata:
+      m_Items: []
+  - m_Id: 90372615840917
+    m_Key: ui.no-creature-available
+    m_Metadata:
+      m_Items: []
+  - m_Id: 174498680406016
+    m_Key: ui.interface-section
+    m_Metadata:
+      m_Items: []
+  - m_Id: 175722427318272
+    m_Key: ui.creature-section-label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 178137142657024
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 5921026637653082112
+  references:
+    version: 2
+    RefIds:
+    - rid: 5921026637653082112
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1786949180728

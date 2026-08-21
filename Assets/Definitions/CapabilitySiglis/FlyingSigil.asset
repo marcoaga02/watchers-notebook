@@ -13,5 +13,17 @@ MonoBehaviour:
   m_Name: FlyingSigil
   m_EditorClassIdentifier: Assembly-CSharp::CapabilitySigil
   interfaceName: IFlyable
-  displayName: Flying Sigil
+  methodSignature: Fly()
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
+    m_TableEntryReference:
+      m_KeyId: 1423389229056
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   icon: {fileID: 5277253155122638260, guid: fe2ee7e9e731ff7c2a7acbcb90463fe4, type: 3}
+  references:
+    version: 2
+    RefIds: []

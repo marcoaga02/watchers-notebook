@@ -199,6 +199,18 @@ PrefabInstance:
       propertyPath: definition
       value: 
       objectReference: {fileID: 11400000, guid: d5bfc4b21a0da535f90548f6201c978b, type: 2}
+    - target: {fileID: 6085578354281746941, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: testBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085578354281746941, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: testBindings.Array.data[0].behavior
+      value: 
+      objectReference: {fileID: 11400000, guid: 6f46c9b9e91385e609ba973cc0098dda, type: 2}
+    - target: {fileID: 6085578354281746941, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: testBindings.Array.data[0].capability
+      value: 
+      objectReference: {fileID: 11400000, guid: 84a6966185a93dca782cc635144cfd03, type: 2}
     - target: {fileID: 7860038625388357452, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_LocalScale.x
       value: 15.157448

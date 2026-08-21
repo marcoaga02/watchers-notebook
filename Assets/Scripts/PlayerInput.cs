@@ -3,16 +3,21 @@ using UnityEngine;
 [RequireComponent(typeof(CreatureMover))]
 public class PlayerInput : MonoBehaviour
 {
-    private CreatureMover _mover;
+    private CreatureMover _target;
 
     private void Awake()
     {
-        _mover = GetComponent<CreatureMover>();
+        _target = GetComponent<CreatureMover>();
+    }
+
+    public void SetTarget(CreatureMover mover)
+    {
+        _target = mover;
     }
 
     private void Update()
     {
         var input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        _mover.SetInput(input);
+        _target.SetInput(input);
     }
 }

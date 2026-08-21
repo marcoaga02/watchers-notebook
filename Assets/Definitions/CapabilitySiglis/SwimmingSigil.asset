@@ -13,5 +13,17 @@ MonoBehaviour:
   m_Name: SwimmingSigil
   m_EditorClassIdentifier: Assembly-CSharp::CapabilitySigil
   interfaceName: ISwimmable
-  displayName: Swimming Sigil
+  methodSignature: Swim()
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
+    m_TableEntryReference:
+      m_KeyId: 1181243670528
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   icon: {fileID: -1003723262732462268, guid: fe2ee7e9e731ff7c2a7acbcb90463fe4, type: 3}
+  references:
+    version: 2
+    RefIds: []
