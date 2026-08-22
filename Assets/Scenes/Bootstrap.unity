@@ -1579,7 +1579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13a0ea5674aa54b2181cb46c4aefdbdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZoneManager
-  initialZoneScene: Zone0_Tutorial
+  initialZoneScene: Overworld
   initialPointId: 
   player: {fileID: 1109860404}
 --- !u!4 &596740948
@@ -2341,7 +2341,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NotebookToggle
   toggleKey: 9
   notebookPanel: {fileID: 791052773}
-  panelManager: {fileID: 769201908}
 --- !u!114 &769201906
 MonoBehaviour:
   m_ObjectHideFlags: 0
