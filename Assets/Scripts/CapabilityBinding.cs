@@ -13,4 +13,9 @@ public class CapabilityBinding
     {
         return _bound.TryGetValue(capability, out var behavior) && behavior.Satisfies(capability);
     }
+
+    public Behavior GetBehavior(CapabilitySigil capability)
+    {
+        return _bound.GetValueOrDefault(capability);
+    }
 }

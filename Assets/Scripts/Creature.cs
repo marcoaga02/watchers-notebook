@@ -15,4 +15,9 @@ public class Creature : MonoBehaviour
     {
         return definition != null && definition.Implements(capability) && _binding.Satisfies(capability);
     }
+
+    public Behavior GetBehavior(CapabilitySigil capability)
+    {
+        return _binding.GetBehavior(capability);
+    }
 }

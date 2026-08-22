@@ -6,18 +6,21 @@ public class ObstaclePrompt : MonoBehaviour
 {
     [SerializeField] private KeyCode openKey = KeyCode.E;
     [SerializeField] private LocalizedString promptText;
+    [SerializeField] private LocalizedString stuckPromptText;
     [SerializeField] private GameObject evocationPanel;
     [SerializeField] private PanelManager panelManager;
     [SerializeField] private PossessionController possessionController;
 
     private CreatureMover _mover;
     private string _resolvedPromptText;
+    private string _resolvedStuckPromptText;
     private bool _isShowingPrompt;
 
     private void Awake()
     {
         _mover = GetComponent<CreatureMover>();
         _resolvedPromptText = promptText.GetLocalizedString();
+        _resolvedStuckPromptText = stuckPromptText.GetLocalizedString();
     }
 
     private void Update()
@@ -30,13 +33,7 @@ public class ObstaclePrompt : MonoBehaviour
 
         if (possessionController.IsPossessing)
         {
-            HidePrompt();
-
-            if (Input.GetKeyDown(openKey))
-            {
-                evocationPanel.SetActive(true);
-            }
-
+            UpdatePossessed();
             return;
         }
 
@@ -49,7 +46,7 @@ public class ObstaclePrompt : MonoBehaviour
             return;
         }
 
-        ShowPrompt();
+        ShowPrompt(_resolvedPromptText, transform);
 
         if (Input.GetKeyDown(openKey))
         {
@@ -58,15 +55,28 @@ public class ObstaclePrompt : MonoBehaviour
         }
     }
 
-    private void ShowPrompt()
+    private void UpdatePossessed()
     {
-        if (_isShowingPrompt)
+        var possessed = possessionController.Possessed;
+        if (possessed == null || !possessed.IsStuck())
         {
+            HidePrompt();
             return;
         }
 
+        ShowPrompt(_resolvedStuckPromptText, possessed.transform);
+
+        if (Input.GetKeyDown(openKey))
+        {
+            evocationPanel.SetActive(true);
+            HidePrompt();
+        }
+    }
+
+    private void ShowPrompt(string text, Transform target)
+    {
         _isShowingPrompt = true;
-        WorldPrompt.Instance.Show(_resolvedPromptText, transform);
+        WorldPrompt.Instance.Show(text, target);
     }
 
     private void HidePrompt()

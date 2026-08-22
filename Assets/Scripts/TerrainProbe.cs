@@ -19,6 +19,11 @@ public class TerrainProbe : MonoBehaviour
         Instance = this;
     }
 
+    public Vector3Int GetCell(Vector3 worldPos)
+    {
+        return grid.WorldToCell(worldPos);
+    }
+
     public CapabilitySigil GetRequiredCapability(Vector3 worldPos)
     {
         var cell = grid.WorldToCell(worldPos);

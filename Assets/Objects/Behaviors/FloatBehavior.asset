@@ -23,6 +23,7 @@ MonoBehaviour:
     m_LocalVariables: []
   icon: {fileID: 170146118684602822, guid: 2bfdeb79a795aaa7eb0e0dc5f3b4637c, type: 3}
   satisfies: {fileID: 11400000, guid: 84a6966185a93dca782cc635144cfd03, type: 2}
+  speedMultiplier: 0
   references:
     version: 2
     RefIds: []

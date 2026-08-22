@@ -135,6 +135,14 @@ MonoBehaviour:
     m_Key: ui.no-interfaces-collected
     m_Metadata:
       m_Items: []
+  - m_Id: 1502000000000017
+    m_Key: ui.dialogue-exit-hint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1502000000000018
+    m_Key: ui.stuck-prompt
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
