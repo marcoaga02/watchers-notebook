@@ -88,6 +88,12 @@ public class CreatureMover : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (TerrainProbe.Instance == null)
+        {
+            _rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
         var velocity = _input * speed * CurrentSpeedMultiplier();
         var nextPosition = _rb.position + velocity * Time.fixedDeltaTime;
 
@@ -120,6 +126,11 @@ public class CreatureMover : MonoBehaviour
 
     public bool IsStuck()
     {
+        if (TerrainProbe.Instance == null)
+        {
+            return false;
+        }
+
         var currentRequired = TerrainProbe.Instance.GetRequiredCapability(_rb.position);
         if (currentRequired != null && !creature.CanUse(currentRequired))
         {

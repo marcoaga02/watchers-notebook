@@ -23,7 +23,7 @@ public class PossessionController : MonoBehaviour
 
     private void Update()
     {
-        if (_possessed == null)
+        if (_possessed == null || TerrainProbe.Instance == null)
         {
             return;
         }

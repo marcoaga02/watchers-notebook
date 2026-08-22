@@ -8,8 +8,6 @@ public class OldManEncounter : MonoBehaviour
     [SerializeField] private float sightRange = 4f;
     [SerializeField] private float sightWidth = 0.2f;
     [SerializeField] private LayerMask sightMask;
-    [SerializeField] private PanelManager panelManager;
-    [SerializeField] private PlayerInventory inventory;
     [SerializeField] private CreatureDefinition creatureToReveal;
     [SerializeField] private LocalizedString dialogueLine;
     [SerializeField] private bool showDebugRay;
@@ -23,7 +21,7 @@ public class OldManEncounter : MonoBehaviour
 
     private void Update()
     {
-        if (_hasTriggered || panelManager.IsAnyPanelOpen)
+        if (_hasTriggered || PanelManager.Instance.IsAnyPanelOpen)
         {
             return;
         }
@@ -47,6 +45,6 @@ public class OldManEncounter : MonoBehaviour
 
     private void OnDialogueClosed()
     {
-        inventory.Observe(creatureToReveal);
+        PlayerInventory.Instance.Observe(creatureToReveal);
     }
 }
