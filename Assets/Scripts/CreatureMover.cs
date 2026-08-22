@@ -91,10 +91,16 @@ public class CreatureMover : MonoBehaviour
         var velocity = _input * speed * CurrentSpeedMultiplier();
         var nextPosition = _rb.position + velocity * Time.fixedDeltaTime;
 
-        var required = TerrainProbe.Instance.GetRequiredCapability(nextPosition);
-        if (required != null && !creature.CanUse(required))
+        var currentCell = TerrainProbe.Instance.GetCell(_rb.position);
+        var nextCell = TerrainProbe.Instance.GetCell(nextPosition);
+
+        if (nextCell != currentCell)
         {
-            velocity = Vector2.zero;
+            var required = TerrainProbe.Instance.GetRequiredCapability(nextPosition);
+            if (required != null && !creature.CanUse(required))
+            {
+                velocity = Vector2.zero;
+            }
         }
 
         _rb.linearVelocity = velocity;
@@ -110,6 +116,24 @@ public class CreatureMover : MonoBehaviour
 
         var behavior = creature.GetBehavior(currentCapability);
         return behavior != null ? behavior.speedMultiplier : 1f;
+    }
+
+    public bool IsStuck()
+    {
+        var currentRequired = TerrainProbe.Instance.GetRequiredCapability(_rb.position);
+        if (currentRequired != null && !creature.CanUse(currentRequired))
+        {
+            return true;
+        }
+
+        if (CurrentSpeedMultiplier() <= 0f)
+        {
+            return true;
+        }
+
+        var aheadPosition = _rb.position + Facing;
+        var aheadRequired = TerrainProbe.Instance.GetRequiredCapability(aheadPosition);
+        return aheadRequired != null && !creature.CanUse(aheadRequired);
     }
 
     private void UpdateAnimation()

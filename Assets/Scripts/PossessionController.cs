@@ -13,6 +13,7 @@ public class PossessionController : MonoBehaviour
     private bool _hasLeftGround;
 
     public bool IsPossessing => _possessed != null;
+    public CreatureMover Possessed => _possessed;
 
     private void Awake()
     {

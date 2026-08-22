@@ -3,6 +3,7 @@ using UnityEngine.Localization;
 
 public class OldManEncounter : MonoBehaviour
 {
+    [SerializeField] private Transform rayOrigin;
     [SerializeField] private Vector2 facingDirection = Vector2.down;
     [SerializeField] private float sightRange = 4f;
     [SerializeField] private float sightWidth = 0.2f;
@@ -27,11 +28,12 @@ public class OldManEncounter : MonoBehaviour
             return;
         }
 
-        var hit = Physics2D.CircleCast(transform.position, sightWidth, facingDirection, sightRange, sightMask);
+        var origin = rayOrigin.position;
+        var hit = Physics2D.CircleCast(origin, sightWidth, facingDirection, sightRange, sightMask);
 
         if (showDebugRay)
         {
-            Debug.DrawRay(transform.position, facingDirection.normalized * sightRange, hit.collider != null ? Color.green : Color.red);
+            Debug.DrawRay(origin, facingDirection.normalized * sightRange, hit.collider != null ? Color.green : Color.red);
         }
 
         if (hit.collider == null || !hit.collider.TryGetComponent<PlayerInput>(out _))

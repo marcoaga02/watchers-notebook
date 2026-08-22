@@ -148,6 +148,12 @@ MonoBehaviour:
     m_Localized: Press E to exit
     m_Metadata:
       m_Items: []
+  - m_Id: 1502000000000018
+    m_Localized: 'This creature cannot proceed here
+
+      (Press E to change creature)'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

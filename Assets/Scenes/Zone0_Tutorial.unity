@@ -5335,6 +5335,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!4 &685012863 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5745095797225487311, guid: ba5d0770b7e11db4391ed0d1816989b8, type: 3}
+  m_PrefabInstance: {fileID: 810179081}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &700459540
 GameObject:
   m_ObjectHideFlags: 0
@@ -5455,7 +5460,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
   collectedSigils: []
-  collectedBehaviors: []
+  collectedBehaviors:
+  - {fileID: 11400000, guid: 585dbb1fce1145a6814fd6d9fe740db1, type: 2}
   observedSpecies: []
 --- !u!4 &769201907
 Transform:
@@ -5532,6 +5538,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1467634316180851024, guid: ba5d0770b7e11db4391ed0d1816989b8, type: 3}
+      propertyPath: hasDirectionalSprites
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4296437389255705035, guid: ba5d0770b7e11db4391ed0d1816989b8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -5581,13 +5591,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 769201906}
     - target: {fileID: 7857409958705968722, guid: ba5d0770b7e11db4391ed0d1816989b8, type: 3}
+      propertyPath: sightRange
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857409958705968722, guid: ba5d0770b7e11db4391ed0d1816989b8, type: 3}
       propertyPath: panelManager
       value: 
       objectReference: {fileID: 769201908}
-    m_RemovedComponents: []
+    - target: {fileID: 7857409958705968722, guid: ba5d0770b7e11db4391ed0d1816989b8, type: 3}
+      propertyPath: showDebugRay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857409958705968722, guid: ba5d0770b7e11db4391ed0d1816989b8, type: 3}
+      propertyPath: dialogueLine.m_WaitForCompletion
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7857409958705968722, guid: ba5d0770b7e11db4391ed0d1816989b8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7173583499890237489, guid: ba5d0770b7e11db4391ed0d1816989b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2075700964}
   m_SourcePrefab: {fileID: 100100000, guid: ba5d0770b7e11db4391ed0d1816989b8, type: 3}
 --- !u!1 &947390494
 GameObject:
@@ -50330,6 +50356,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2075700957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7173583499890237489, guid: ba5d0770b7e11db4391ed0d1816989b8, type: 3}
+  m_PrefabInstance: {fileID: 810179081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2075700964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075700957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 771a2a05ad6b13a72aa68a226d24f195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OldManEncounter
+  rayOrigin: {fileID: 685012863}
+  facingDirection: {x: 0, y: -1}
+  sightRange: 6
+  sightWidth: 0.2
+  sightMask:
+    serializedVersion: 2
+    m_Bits: 192
+  panelManager: {fileID: 769201908}
+  inventory: {fileID: 769201906}
+  creatureToReveal: {fileID: 11400000, guid: d8715ba34da3f763ab48d570abb01fa5, type: 2}
+  dialogueLine:
+    m_TableReference:
+      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  showDebugRay: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &2111823822
 GameObject:
   m_ObjectHideFlags: 0
@@ -50455,6 +50521,14 @@ PrefabInstance:
       propertyPath: evocationPanel
       value: 
       objectReference: {fileID: 223801829}
+    - target: {fileID: 3076504636192606311, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
+      propertyPath: stuckPromptText.m_TableEntryReference.m_KeyId
+      value: 1502000000000018
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076504636192606311, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
+      propertyPath: stuckPromptText.m_TableReference.m_TableCollectionName
+      value: GUID:a3934c22933ed1fd688b94cdb220f1e6
+      objectReference: {fileID: 0}
     - target: {fileID: 4563148621810833755, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
