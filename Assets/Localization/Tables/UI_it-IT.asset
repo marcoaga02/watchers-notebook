@@ -144,6 +144,10 @@ MonoBehaviour:
     m_Localized: Nessuna interfaccia raccolta
     m_Metadata:
       m_Items: []
+  - m_Id: 1502000000000017
+    m_Localized: Premi E per uscire
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

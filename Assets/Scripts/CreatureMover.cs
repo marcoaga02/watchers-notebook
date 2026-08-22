@@ -34,6 +34,30 @@ public class CreatureMover : MonoBehaviour
         _input = input.normalized;
     }
 
+    public void SetFacing(Vector2 direction)
+    {
+        if (direction.sqrMagnitude <= 0.01f)
+        {
+            return;
+        }
+
+        Facing = Mathf.Abs(direction.x) > Mathf.Abs(direction.y)
+            ? new Vector2(Mathf.Sign(direction.x), 0f)
+            : new Vector2(0f, Mathf.Sign(direction.y));
+
+        if (!_hasAnimator)
+        {
+            return;
+        }
+
+        _animator.SetFloat(MoveX, Facing.x);
+        _animator.SetFloat(MoveY, Facing.y);
+        if (!hasDirectionalSprites)
+        {
+            _spriteRenderer.flipX = Facing.x < 0f;
+        }
+    }
+
     public void SetControlEnabled(bool value)
     {
         enabled = value;

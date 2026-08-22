@@ -26,11 +26,11 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: fffbaa56f18337104974f6d046ca15ca, type: 2}
     - target: {fileID: 2637991325129454414, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.45457
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2637991325129454414, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.55538
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2637991325129454414, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -108,6 +108,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 5802512193167214922, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802512193167214922, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883658680300217455, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7860038625388357452, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_LocalScale.x
       value: 15.157448
@@ -140,6 +152,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7380595139243384231, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3062185911154772982}
+    - targetCorrespondingSourceObject: {fileID: 7380595139243384231, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7857409958705968722}
   m_SourcePrefab: {fileID: 100100000, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
 --- !u!1 &8741803554282385186 stripped
 GameObject:
@@ -168,3 +183,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7857409958705968722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8741803554282385186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 771a2a05ad6b13a72aa68a226d24f195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OldManEncounter
+  facingDirection: {x: 0, y: -1}
+  sightRange: 4
+  sightWidth: 0.2
+  sightMask:
+    serializedVersion: 2
+    m_Bits: 192
+  panelManager: {fileID: 0}
+  inventory: {fileID: 0}
+  creatureToReveal: {fileID: 11400000, guid: d5bfc4b21a0da535f90548f6201c978b, type: 2}
+  dialogueLine:
+    m_TableReference:
+      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  showDebugRay: 1
+  references:
+    version: 2
+    RefIds: []

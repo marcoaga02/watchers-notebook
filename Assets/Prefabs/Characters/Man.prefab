@@ -118,7 +118,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8985160675770995380, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_Name
-      value: Man 1
+      value: Man
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985160675770995380, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5609683809984856905, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
@@ -170,9 +174,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaclePrompt
   openKey: 101
-  promptRoot: {fileID: 0}
+  promptText:
+    m_TableReference:
+      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
+    m_TableEntryReference:
+      m_KeyId: 1502000000000012
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   evocationPanel: {fileID: 0}
   panelManager: {fileID: 0}
-  canvasRect: {fileID: 0}
   possessionController: {fileID: 3494396364108316922}
-  worldOffset: {x: 0, y: 1.2, z: 0}
+  references:
+    version: 2
+    RefIds: []
