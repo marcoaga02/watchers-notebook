@@ -88,7 +88,7 @@ public class CreatureMover : MonoBehaviour
 
     private void FixedUpdate()
     {
-        var velocity = _input * speed;
+        var velocity = _input * speed * CurrentSpeedMultiplier();
         var nextPosition = _rb.position + velocity * Time.fixedDeltaTime;
 
         var required = TerrainProbe.Instance.GetRequiredCapability(nextPosition);
@@ -98,6 +98,18 @@ public class CreatureMover : MonoBehaviour
         }
 
         _rb.linearVelocity = velocity;
+    }
+
+    private float CurrentSpeedMultiplier()
+    {
+        var currentCapability = TerrainProbe.Instance.GetRequiredCapability(_rb.position);
+        if (currentCapability == null)
+        {
+            return 1f;
+        }
+
+        var behavior = creature.GetBehavior(currentCapability);
+        return behavior != null ? behavior.speedMultiplier : 1f;
     }
 
     private void UpdateAnimation()
