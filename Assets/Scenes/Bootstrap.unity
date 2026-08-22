@@ -2354,8 +2354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
   collectedSigils: []
-  collectedBehaviors:
-  - {fileID: 11400000, guid: 585dbb1fce1145a6814fd6d9fe740db1, type: 2}
+  collectedBehaviors: []
   observedSpecies: []
 --- !u!4 &769201907
 Transform:
