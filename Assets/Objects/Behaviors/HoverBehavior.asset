@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a966586896f3dbbab56076bd5b476fd, type: 3}
-  m_Name: SpinBehavior
+  m_Name: HoverBehavior
   m_EditorClassIdentifier: Assembly-CSharp::Behavior
   displayName:
     m_TableReference:
