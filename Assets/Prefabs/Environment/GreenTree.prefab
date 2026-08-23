@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4496733737620809988}
   - component: {fileID: 734756155628592283}
   - component: {fileID: 2810026309840870104}
+  - component: {fileID: 5279966746787611978}
   m_Layer: 7
   m_Name: GreenTree
   m_TagString: Untagged
@@ -78,8 +79,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 525112879
-  m_SortingLayer: 3
+  m_SortingLayerID: -918161307
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6489005286283933747, guid: a68db035d81e01e7c8b19c4e01f3bb7b, type: 3}
@@ -138,3 +139,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.5625, y: 7.875}
   m_EdgeRadius: 0
+--- !u!114 &5279966746787611978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211116390481348542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d060562744165d45b4271ac1160167f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YSort
+  precision: 100
