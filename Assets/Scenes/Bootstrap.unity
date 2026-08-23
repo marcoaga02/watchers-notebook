@@ -2353,9 +2353,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54231ec6aa5e9054ab27a5cf26560068, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
-  collectedSigils: []
-  collectedBehaviors: []
-  observedSpecies: []
+  collectedSigils:
+  - {fileID: 11400000, guid: 84a6966185a93dca782cc635144cfd03, type: 2}
+  collectedBehaviors:
+  - {fileID: 11400000, guid: ceff282cf3ce464488fdc2bc43c31d8f, type: 2}
+  observedSpecies:
+  - {fileID: 11400000, guid: d5bfc4b21a0da535f90548f6201c978b, type: 2}
 --- !u!4 &769201907
 Transform:
   m_ObjectHideFlags: 0
@@ -4548,11 +4551,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4563148621810833755, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 60.8
       objectReference: {fileID: 0}
     - target: {fileID: 4563148621810833755, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -4.4
       objectReference: {fileID: 0}
     - target: {fileID: 4563148621810833755, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
       propertyPath: m_LocalPosition.z

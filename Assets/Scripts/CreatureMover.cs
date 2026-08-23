@@ -88,24 +88,21 @@ public class CreatureMover : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (TerrainProbe.Instance == null)
-        {
-            _rb.linearVelocity = Vector2.zero;
-            return;
-        }
-
         var velocity = _input * speed * CurrentSpeedMultiplier();
-        var nextPosition = _rb.position + velocity * Time.fixedDeltaTime;
 
-        var currentCell = TerrainProbe.Instance.GetCell(_rb.position);
-        var nextCell = TerrainProbe.Instance.GetCell(nextPosition);
-
-        if (nextCell != currentCell)
+        if (TerrainProbe.Instance != null)
         {
-            var required = TerrainProbe.Instance.GetRequiredCapability(nextPosition);
-            if (required != null && !creature.CanUse(required))
+            var nextPosition = _rb.position + velocity * Time.fixedDeltaTime;
+            var currentCell = TerrainProbe.Instance.GetCell(_rb.position);
+            var nextCell = TerrainProbe.Instance.GetCell(nextPosition);
+
+            if (nextCell != currentCell)
             {
-                velocity = Vector2.zero;
+                var required = TerrainProbe.Instance.GetRequiredCapability(nextPosition);
+                if (required != null && !creature.CanUse(required))
+                {
+                    velocity = Vector2.zero;
+                }
             }
         }
 
@@ -114,6 +111,11 @@ public class CreatureMover : MonoBehaviour
 
     private float CurrentSpeedMultiplier()
     {
+        if (TerrainProbe.Instance == null)
+        {
+            return 1f;
+        }
+
         var currentCapability = TerrainProbe.Instance.GetRequiredCapability(_rb.position);
         if (currentCapability == null)
         {
