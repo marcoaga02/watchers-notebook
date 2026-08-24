@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6220846708209279708}
   - component: {fileID: -8051221797352849815}
   - component: {fileID: 3028816340056524285}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SmallTreeRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}

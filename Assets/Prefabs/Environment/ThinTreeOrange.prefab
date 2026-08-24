@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8144296089981115407}
   - component: {fileID: 8688741993751250735}
   - component: {fileID: 8787168252263987237}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ThinTreeOrange
   m_TagString: Untagged
   m_Icon: {fileID: 0}

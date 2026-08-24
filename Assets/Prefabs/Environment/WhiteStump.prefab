@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9190508033062605381}
   - component: {fileID: -7665727649741820788}
   - component: {fileID: -5816651109919522958}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WhiteStump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
