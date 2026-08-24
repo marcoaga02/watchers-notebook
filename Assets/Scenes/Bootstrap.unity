@@ -3338,6 +3338,24 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
+--- !u!1 &1160304824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9052987799265720242, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
+  m_PrefabInstance: {fileID: 605323406351230460}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1160304829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160304824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d060562744165d45b4271ac1160167f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YSort
+  precision: 100
 --- !u!1 &1439184560
 GameObject:
   m_ObjectHideFlags: 0
@@ -4529,26 +4547,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 740743089069084120, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
-      propertyPath: panelManager
-      value: 
-      objectReference: {fileID: 769201908}
-    - target: {fileID: 3076504636192606311, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
-      propertyPath: panelManager
-      value: 
-      objectReference: {fileID: 769201908}
     - target: {fileID: 3076504636192606311, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
       propertyPath: evocationPanel
       value: 
       objectReference: {fileID: 223801829}
-    - target: {fileID: 3076504636192606311, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
-      propertyPath: stuckPromptText.m_TableEntryReference.m_KeyId
-      value: 1502000000000018
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076504636192606311, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
-      propertyPath: stuckPromptText.m_TableReference.m_TableCollectionName
-      value: GUID:a3934c22933ed1fd688b94cdb220f1e6
-      objectReference: {fileID: 0}
     - target: {fileID: 4563148621810833755, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 60.8
@@ -4593,10 +4595,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Man
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3058043987062002438, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9052987799265720242, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1160304829}
   m_SourcePrefab: {fileID: 100100000, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
 --- !u!114 &7781698518087132484 stripped
 MonoBehaviour:

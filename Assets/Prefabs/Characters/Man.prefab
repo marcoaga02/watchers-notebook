@@ -26,11 +26,11 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: fffbaa56f18337104974f6d046ca15ca, type: 2}
     - target: {fileID: 2637991325129454414, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30
+      value: 60.8
       objectReference: {fileID: 0}
     - target: {fileID: 2637991325129454414, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.95073
+      value: -4.4
       objectReference: {fileID: 0}
     - target: {fileID: 2637991325129454414, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -70,11 +70,11 @@ PrefabInstance:
       objectReference: {fileID: 6699638555593420609, guid: 464c7b409bf3012f7b963e4a07e6c23b, type: 3}
     - target: {fileID: 3592138512623344584, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3592138512623344584, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 442
       objectReference: {fileID: 0}
     - target: {fileID: 3592138512623344584, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_SortingLayerID
@@ -123,6 +123,18 @@ PrefabInstance:
     - target: {fileID: 8985160675770995380, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130363319245316299, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130363319245316299, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130363319245316299, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.7
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5609683809984856905, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
@@ -183,8 +195,16 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  stuckPromptText:
+    m_TableReference:
+      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
+    m_TableEntryReference:
+      m_KeyId: 1502000000000018
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   evocationPanel: {fileID: 0}
-  panelManager: {fileID: 0}
   possessionController: {fileID: 3494396364108316922}
   references:
     version: 2

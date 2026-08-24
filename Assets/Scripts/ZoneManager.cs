@@ -51,6 +51,8 @@ public class ZoneManager : MonoBehaviour
             player.position = entrance.SpawnPosition;
         }
 
+        CameraFollow.Instance.Snap();
+
         _isTravelling = false;
     }
 
