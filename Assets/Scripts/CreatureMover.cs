@@ -106,7 +106,14 @@ public class CreatureMover : MonoBehaviour
             }
         }
 
-        _rb.linearVelocity = velocity;
+        if (_rb.bodyType == RigidbodyType2D.Kinematic)
+        {
+            _rb.MovePosition(_rb.position + velocity * Time.fixedDeltaTime);
+        }
+        else
+        {
+            _rb.linearVelocity = velocity;
+        }
     }
 
     private float CurrentSpeedMultiplier()

@@ -81,7 +81,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 145828413
   m_SortingLayer: 7
-  m_SortingOrder: 1
+  m_SortingOrder: 79
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2623127153346953542, guid: dd9c400f5840a469b852cf61fb95ad19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -175,7 +175,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5988747505045219203}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -238,7 +238,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.5}
+  m_Size: {x: 1, y: 0.6}
   m_EdgeRadius: 0
 --- !u!114 &1006156585888668818
 MonoBehaviour:
@@ -293,6 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Creature
   definition: {fileID: 11400000, guid: d8715ba34da3f763ab48d570abb01fa5, type: 2}
+  initialBindings: []
 --- !u!212 &177200727497011611
 SpriteRenderer:
   serializedVersion: 2
