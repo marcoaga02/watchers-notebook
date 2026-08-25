@@ -149,9 +149,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000018
-    m_Localized: 'Questa creatura non può proseguire qui
-
-      (Premi E per cambiare creatura)'
+    m_Localized: "Questa creatura non pu\xF2 proseguire qui\n(Premi E per cambiare
+      creatura)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3047651874177024
+    m_Localized: Duatleta
     m_Metadata:
       m_Items: []
   references:

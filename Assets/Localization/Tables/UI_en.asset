@@ -154,6 +154,10 @@ MonoBehaviour:
       (Press E to change creature)'
     m_Metadata:
       m_Items: []
+  - m_Id: 3047651874177024
+    m_Localized: Duathlete
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

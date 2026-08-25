@@ -143,6 +143,10 @@ MonoBehaviour:
     m_Key: ui.stuck-prompt
     m_Metadata:
       m_Items: []
+  - m_Id: 3047651874177024
+    m_Key: creature.duathlete
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
