@@ -70,8 +70,6 @@ public class PossessionController : MonoBehaviour
 
     private void Return()
     {
-        // TODO: play the Death animation on the possessed instance before destroying it,
-        // once the clip is wired up.
         var returnPosition = _possessed.transform.position;
         Destroy(_possessed.gameObject);
         _possessed = null;

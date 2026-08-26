@@ -5379,10 +5379,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3032715497919754717, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
-      propertyPath: m_SortingOrder
-      value: 33
-      objectReference: {fileID: 0}
     - target: {fileID: 3076504636192606311, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
       propertyPath: evocationPanel
       value: 
@@ -5426,14 +5422,6 @@ PrefabInstance:
     - target: {fileID: 4563148621810833755, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5424904902203990879, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 5424904902203990879, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.33
       objectReference: {fileID: 0}
     - target: {fileID: 7457464398330575009, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
       propertyPath: m_Name

@@ -35,7 +35,7 @@ public class CreatureDefinition : ScriptableObject
         return false;
     }
 
-    public IEnumerable<CapabilitySigil> AllCapabilities()
+    private IEnumerable<CapabilitySigil> AllCapabilities()
     {
         var all = new HashSet<CapabilitySigil>();
         var current = this;

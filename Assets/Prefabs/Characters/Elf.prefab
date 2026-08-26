@@ -253,8 +253,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   speed: 4
-  _spriteRenderer: {fileID: 2571671188868598951}
-  _animator: {fileID: 6685796286790480470}
+  sprintMultiplier: 1.5
+  spriteRenderer: {fileID: 2571671188868598951}
+  animator: {fileID: 6685796286790480470}
   creature: {fileID: 154587497355107480}
   hasDirectionalSprites: 1
 --- !u!114 &6646013415374080978

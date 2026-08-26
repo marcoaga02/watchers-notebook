@@ -9,9 +9,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 820237368963251157, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 3062185911154772982}
+    - target: {fileID: 820237368963251157, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: _animator
       value: 
       objectReference: {fileID: 3062185911154772982}
+    - target: {fileID: 820237368963251157, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 3379338925134195021}
     - target: {fileID: 820237368963251157, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: hasDirectionalSprites
       value: 1
@@ -159,6 +167,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7039614634384610691}
   m_SourcePrefab: {fileID: 100100000, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+--- !u!212 &3379338925134195021 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3592138512623344584, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+  m_PrefabInstance: {fileID: 2250678487594316421}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5745095797225487311 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5802512193167214922, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
