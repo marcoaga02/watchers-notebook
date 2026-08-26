@@ -59,19 +59,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 174498680406016
-    m_Localized: Available Interfaces
+    m_Localized: Available Sigils (interfaces)
     m_Metadata:
       m_Items: []
   - m_Id: 175722427318272
-    m_Localized: Available creatures
+    m_Localized: Available Creatures
     m_Metadata:
       m_Items: []
   - m_Id: 1501569553793024
-    m_Localized: Known creatures
+    m_Localized: Known Creatures (classes)
     m_Metadata:
       m_Items: []
   - m_Id: 1501762143649792
-    m_Localized: Known Interfaces
+    m_Localized: Known Sigils (interfaces)
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000001
@@ -141,11 +141,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000016
-    m_Localized: No interfaces collected yet
+    m_Localized: No sigils collected yet
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000017
-    m_Localized: Press E to exit
+    m_Localized: Press ESC to exit
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000018
@@ -155,7 +155,109 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3047651874177024
-    m_Localized: Duathlete
+    m_Localized: Dragon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3362282396188672
+    m_Localized: No sigil available
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3383246672625664
+    m_Localized: 'Hold on, traveler. This world isn''t as I remember it: ever since
+      my travel companion pushed further to explore it, everything seems to follow
+      its own silent rules, rules no one explains. You only learn them by observing.
+
+
+      Observe
+      the creatures you meet, collect what you find along the way: they''re the only
+      clues you''ll need to overcome the obstacles ahead.
+
+
+      Press TAB to check
+      your notebook. It updates on its own every time you observe a new species or
+      collect something. When you face an obstacle, press E: if you''ve collected
+      what''s needed, you''ll be able to compose a creature able to overcome it.
+
+
+      Hold
+      Shift to run, when the road ahead is long.
+
+
+      Go on, and keep your eyes
+      open.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3384503630036992
+    m_Localized: 'Look over there, the lizards. Watch them closely: they''re a joy
+      to see swim.
+
+
+      But don''t think they''re all the same. Some dart through
+      the water with no effort at all, others swim more calmly, and I''ve even seen
+      a few that just float there, still, as if they''d forgotten how it''s done.
+      Same species, yet each one in its own way.
+
+
+      Watch them carefully: you''ll
+      find them in your notebook now.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3385483536891904
+    m_Localized: 'Look up there, the fairies. Watch them closely: they''re a marvel
+      to see fly.
+
+
+      But they''re not all the same either. Some dart through
+      the air fast as the wind, others fly more calmly, and I''ve even seen a few
+      that just hover in place, as if they''d forgotten where they were going. Same
+      species, yet each one in its own way.
+
+
+      Watch them carefully: you''ll
+      find them in your notebook now.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3386805808005120
+    m_Localized: 'Look at that one, over there. It''s neither fish nor bird: it swims
+      and flies, both at once, the same creature.
+
+
+      You won''t see many like
+      it. But if you ever come across a stretch where water and empty air follow
+      one another with no solid ground in between, you''ll understand why they come
+      in handy: you won''t need to switch creatures every few steps, one alone will
+      see you through, capable of both from start to finish.
+
+
+      Watch it carefully:
+      you''ll find it in your notebook now.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3387202555609088
+    m_Localized: 'You''ve come this far. You''ve watched different creatures, one
+      by one, taking your time. You found capabilities and behaviors apart from each
+      other, scattered across the world, and it was you who brought them together,
+      again and again, to build the right creature for each obstacle. And when an
+      obstacle left no way around it, you understood that all it took was a single
+      creature capable of more than one thing at once.
+
+
+      You didn''t just collect
+      pieces: you put them together yourself, differently each time.
+
+
+      If you
+      go on, you''ll return to the start of the map, but you''ll carry with you everything
+      you''ve learned. You''ll be able to keep exploring the areas you haven''t visited
+      yet, if there are any left.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3389942509862912
+    m_Localized: Seleziona italiano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3399791348023296
+    m_Localized: Press E to talk
     m_Metadata:
       m_Items: []
   references:

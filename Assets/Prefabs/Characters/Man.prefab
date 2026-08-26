@@ -26,11 +26,11 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: fffbaa56f18337104974f6d046ca15ca, type: 2}
     - target: {fileID: 2637991325129454414, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 60.8
+      value: 265.86
       objectReference: {fileID: 0}
     - target: {fileID: 2637991325129454414, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.4
+      value: 142.38
       objectReference: {fileID: 0}
     - target: {fileID: 2637991325129454414, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3592138512623344584, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_SortingOrder
-      value: 442
+      value: -14238
       objectReference: {fileID: 0}
     - target: {fileID: 3592138512623344584, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_SortingLayerID
@@ -99,6 +99,14 @@ PrefabInstance:
     - target: {fileID: 5802512193167214922, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802512193167214922, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802512193167214922, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7860038625388357452, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_LocalScale.x
@@ -149,6 +157,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8985160675770995380, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3076504636192606311}
+    - targetCorrespondingSourceObject: {fileID: 7380595139243384231, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 550778710618055408}
   m_SourcePrefab: {fileID: 100100000, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
 --- !u!95 &150360946359916762 stripped
 Animator:
@@ -209,3 +220,21 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
+--- !u!1 &9052987799265720242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7380595139243384231, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+  m_PrefabInstance: {fileID: 2003970290517682709}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &550778710618055408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9052987799265720242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d060562744165d45b4271ac1160167f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YSort
+  precision: 100

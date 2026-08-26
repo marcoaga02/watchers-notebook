@@ -3,15 +3,18 @@ using UnityEngine.Localization;
 
 public class OldManEncounter : MonoBehaviour
 {
+    [SerializeField] private KeyCode talkKey = KeyCode.E;
     [SerializeField] private Transform rayOrigin;
     [SerializeField] private Vector2 facingDirection = Vector2.down;
     [SerializeField] private float sightRange = 4f;
     [SerializeField] private LayerMask sightMask;
     [SerializeField] private CreatureDefinition creatureToReveal;
     [SerializeField] private LocalizedString dialogueLine;
+    [SerializeField] private LocalizedString talkPromptText;
     [SerializeField] private bool showDebugRay;
 
     private bool _hasTriggered;
+    private bool _isShowingPrompt;
 
     private void Start()
     {
@@ -20,8 +23,9 @@ public class OldManEncounter : MonoBehaviour
 
     private void Update()
     {
-        if (_hasTriggered || PanelManager.Instance.IsAnyPanelOpen)
+        if (PanelManager.Instance.IsAnyPanelOpen)
         {
+            HidePrompt();
             return;
         }
 
@@ -35,16 +39,44 @@ public class OldManEncounter : MonoBehaviour
 
         if (hit.collider == null || !hit.collider.TryGetComponent<PlayerInput>(out var playerInput))
         {
+            HidePrompt();
             return;
         }
 
-        _hasTriggered = true;
-        playerInput.GetComponent<CreatureMover>().SetFacing(-facingDirection);
-        DialoguePanel.Instance.Show(dialogueLine.GetLocalizedString(), OnDialogueClosed);
+        if (!_hasTriggered)
+        {
+            _hasTriggered = true;
+            playerInput.GetComponent<CreatureMover>().SetFacing(-facingDirection);
+            DialoguePanel.Instance.Show(dialogueLine.GetLocalizedString(), OnDialogueClosed);
+            return;
+        }
+
+        _isShowingPrompt = true;
+        WorldPrompt.Instance.Show(talkPromptText.GetLocalizedString(), transform);
+
+        if (Input.GetKeyDown(talkKey))
+        {
+            HidePrompt();
+            DialoguePanel.Instance.Show(dialogueLine.GetLocalizedString(), OnDialogueClosed);
+        }
+    }
+
+    private void HidePrompt()
+    {
+        if (!_isShowingPrompt)
+        {
+            return;
+        }
+
+        _isShowingPrompt = false;
+        WorldPrompt.Instance.Hide();
     }
 
     private void OnDialogueClosed()
     {
-        PlayerInventory.Instance.Observe(creatureToReveal);
+        if (creatureToReveal != null)
+        {
+            PlayerInventory.Instance.Observe(creatureToReveal);
+        }
     }
 }

@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: it-IT
   m_SharedData: {fileID: 11400000, guid: a3934c22933ed1fd688b94cdb220f1e6, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 5921026844715122763
   m_TableData:
   - m_Id: 1181243670528
     m_Localized: Sigillo del nuoto
@@ -59,19 +60,20 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 174498680406016
-    m_Localized: Interfacce disponibili
+    m_Localized: Sigilli Disponibili (interfacce)
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 5921026844715122763
   - m_Id: 175722427318272
-    m_Localized: Creature disponibili
+    m_Localized: Creature Disponibili
     m_Metadata:
       m_Items: []
   - m_Id: 1501569553793024
-    m_Localized: Creature Conosciute
+    m_Localized: Creature Conosciute (classi)
     m_Metadata:
       m_Items: []
   - m_Id: 1501762143649792
-    m_Localized: Interfacce conosciute
+    m_Localized: Sigilli Conosciuti (interfacce)
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000001
@@ -141,11 +143,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000016
-    m_Localized: Nessuna interfaccia raccolta
+    m_Localized: Nessun sigillo raccolto
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000017
-    m_Localized: Premi E per uscire
+    m_Localized: Premi ESC per uscire
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000018
@@ -154,9 +156,80 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3047651874177024
-    m_Localized: Duatleta
+    m_Localized: Drago
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3362282396188672
+    m_Localized: Nessun sigillo disponibile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3383246672625664
+    m_Localized: "Fermati, viandante. Questo mondo non \xE8 come lo ricordavo: da
+      quando il mio compagno di viaggio si \xE8 spinto oltre per esplorarlo, tutto
+      sembra seguire regole sue, silenziose, che nessuno spiega. Si scoprono solo
+      osservando.\n\nOsserva le creature che incontri, raccogli ci\xF2 che trovi
+      lungo il cammino: sono gli unici indizi che ti serviranno per superare gli
+      ostacoli che troverai.\n\nPremi TAB per consultare il tuo taccuino. Si aggiorna
+      da solo ogni volta che osservi una nuova specie o raccogli qualcosa.\nDi fronte
+      a un ostacolo, premi E: se hai raccolto ci\xF2 che serve, potrai comporre una
+      creatura capace di superarlo.\n\nTieni premuto Shift per correre, quando la
+      strada \xE8 lunga.\n\nVai, e tieni gli occhi aperti."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3384503630036992
+    m_Localized: "Guarda laggi\xF9, le lucertole. Osservale bene: sono creature che
+      nuotano che \xE8 un piacere.\n\nMa non pensare che siano tutte uguali. Alcune
+      sfrecciano nell'acqua senza sforzo, altre nuotano con pi\xF9 calma, e ne ho
+      viste persino alcune che si limitano a galleggiare, ferme, come se avessero
+      dimenticato come si fa. Stessa specie, eppure ognuna a modo suo.\n\nOsservale
+      con attenzione: ora le troverai anche nel tuo taccuino."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3385483536891904
+    m_Localized: "Guarda in alto, le fatine. Osservale bene: volano che \xE8 una
+      meraviglia.\n\nMa anche loro non sono tutte uguali. Alcune sfrecciano nell'aria
+      veloci come il vento, altre volano con pi\xF9 calma, e ne ho viste perfino
+      alcune che restano ferme a mezz'aria, come se avessero dimenticato dove stavano
+      andando. Stessa specie, eppure ognuna a modo suo.\n\nOsservale con attenzione:
+      ora le troverai anche nel tuo taccuino."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3386805808005120
+    m_Localized: "Guarda quello, laggi\xF9. Non \xE8 n\xE9 un pesce n\xE9 un uccello:
+      nuota e vola, entrambe le cose, la stessa creatura.\n\nNe vedrai poche di cos\xEC.
+      Ma se ti capita un tratto di strada dove acqua e vuoto si susseguono senza
+      un attimo di terra ferma in mezzo, capirai perch\xE9 tornano comode: non dovrai
+      pi\xF9 cambiare creatura ogni due passi, te la cavi con una sola, capace di
+      entrambe le cose dall'inizio alla fine.\n\nOsservala con attenzione: ora la
+      troverai anche nel tuo taccuino."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3387202555609088
+    m_Localized: "Sei arrivato fin qui. Hai osservato creature diverse, una a una,
+      senza fretta. Hai trovato capacit\xE0 e comportamenti separati, in punti diversi
+      del mondo, e li hai uniti tu, di volta in volta, per costruire la creatura
+      giustaper ogni ostacolo. E quando un ostacolo non lasciava scampo, hai capito
+      che bastava una creatura capace di pi\xF9 cose insieme.\n\nNon ti sei limitato
+      a raccogliere pezzi: li hai messi insieme tu, ogni volta in modo diverso.\n\nSe
+      vuoi proseguire, tornerai all'inizio della mappa, ma porterai con te tutto
+      quello che hai imparato. Potrai continuare a esplorare le zone che non hai
+      ancora visitato, se ce ne sono."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3389942509862912
+    m_Localized: Choose english
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3399791348023296
+    m_Localized: Premi E per parlare
     m_Metadata:
       m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 5921026844715122763
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 174498680406016

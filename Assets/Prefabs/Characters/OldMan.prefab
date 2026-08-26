@@ -181,10 +181,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 771a2a05ad6b13a72aa68a226d24f195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OldManEncounter
+  talkKey: 101
   rayOrigin: {fileID: 5745095797225487311}
   facingDirection: {x: 1, y: 0}
   sightRange: 6
-  sightWidth: 0.2
   sightMask:
     serializedVersion: 2
     m_Bits: 64
@@ -194,6 +194,15 @@ MonoBehaviour:
       m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
     m_TableEntryReference:
       m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  talkPromptText:
+    m_TableReference:
+      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
+    m_TableEntryReference:
+      m_KeyId: 3399791348023296
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

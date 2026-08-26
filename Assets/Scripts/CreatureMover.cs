@@ -5,10 +5,12 @@ using UnityEngine;
 public class CreatureMover : MonoBehaviour
 {
     private static readonly int IsMoving = Animator.StringToHash("IsMoving");
+    private static readonly int IsRunning = Animator.StringToHash("IsRunning");
     private static readonly int MoveX = Animator.StringToHash("MoveX");
     private static readonly int MoveY = Animator.StringToHash("MoveY");
 
     [SerializeField] private float speed = 4f;
+    [SerializeField] private float sprintMultiplier = 1.5f;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Animator _animator;
     [SerializeField] private Creature creature;
@@ -18,8 +20,10 @@ public class CreatureMover : MonoBehaviour
 
     private Rigidbody2D _rb;
     private bool _hasAnimator;
+    private bool _hasRunningParameter;
 
     private Vector2 _input;
+    private bool _isSprinting;
 
     public Vector2 Facing { get; private set; } = Vector2.down;
 
@@ -27,11 +31,18 @@ public class CreatureMover : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _hasAnimator = _animator != null;
+        // not every rig has a running state (only Man does), so this parameter is optional
+        _hasRunningParameter = _hasAnimator && System.Array.Exists(_animator.parameters, p => p.nameHash == IsRunning);
     }
 
     public void SetInput(Vector2 input)
     {
         _input = input.normalized;
+    }
+
+    public void SetSprinting(bool value)
+    {
+        _isSprinting = value;
     }
 
     public void SetFacing(Vector2 direction)
@@ -88,7 +99,7 @@ public class CreatureMover : MonoBehaviour
 
     private void FixedUpdate()
     {
-        var velocity = _input * speed * CurrentSpeedMultiplier();
+        var velocity = _input * speed * CurrentSpeedMultiplier() * (_isSprinting ? sprintMultiplier : 1f);
 
         if (TerrainProbe.Instance != null)
         {
@@ -165,6 +176,10 @@ public class CreatureMover : MonoBehaviour
 
         var isMoving = _input.sqrMagnitude > 0.01f;
         _animator.SetBool(IsMoving, isMoving);
+        if (_hasRunningParameter)
+        {
+            _animator.SetBool(IsRunning, isMoving && _isSprinting);
+        }
 
         if (!isMoving)
         {
