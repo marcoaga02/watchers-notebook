@@ -217,7 +217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6085578354281746941, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: initialBindings.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6085578354281746941, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: testBindings.Array.data[0].behavior
