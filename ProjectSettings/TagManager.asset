@@ -47,8 +47,14 @@ TagManager:
   - name: Obstacles
     uniqueID: 3221031311
     locked: 0
+  - name: Overground
+    uniqueID: 787759971
+    locked: 0
   - name: Walls
     uniqueID: 525112879
+    locked: 0
+  - name: ExternalDecorations
+    uniqueID: 3376805989
     locked: 0
   - name: Collectibles
     uniqueID: 3066944195

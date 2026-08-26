@@ -143,6 +143,42 @@ MonoBehaviour:
     m_Key: ui.stuck-prompt
     m_Metadata:
       m_Items: []
+  - m_Id: 3047651874177024
+    m_Key: creature.duathlete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3362282396188672
+    m_Key: ui.no-interface-available
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3383246672625664
+    m_Key: ui.old-man.introduction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3384503630036992
+    m_Key: ui.old-man.water
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3385483536891904
+    m_Key: ui.old-man.fly
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3386805808005120
+    m_Key: ui.old-man.duathlete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3387202555609088
+    m_Key: ui.old-man.final
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3389942509862912
+    m_Key: ui.toggle-language-label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3399791348023296
+    m_Key: ui.old-man.talk
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

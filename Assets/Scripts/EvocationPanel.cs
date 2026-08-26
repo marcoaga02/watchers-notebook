@@ -12,6 +12,7 @@ public class EvocationPanel : MonoBehaviour
     [Header("Sigil composition")]
     [SerializeField] private Transform sigilRowContainer;
     [SerializeField] private SigilCompositionRow sigilRowPrefab;
+    [SerializeField] private TMP_Text noInterfaceLabel;
 
     [Header("Matched creature")]
     [SerializeField] private CreatureRow creatureRow;
@@ -32,6 +33,8 @@ public class EvocationPanel : MonoBehaviour
             row.ValueChanged += Refresh;
             _sigilRows.Add(row);
         }
+
+        noInterfaceLabel.gameObject.SetActive(_sigilRows.Count == 0);
 
         Refresh();
     }

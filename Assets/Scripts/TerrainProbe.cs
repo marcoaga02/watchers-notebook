@@ -27,12 +27,12 @@ public class TerrainProbe : MonoBehaviour
     public CapabilitySigil GetRequiredCapability(Vector3 worldPos)
     {
         var cell = grid.WorldToCell(worldPos);
-        if (waterMap.HasTile(cell))
+        if (waterMap != null && waterMap.HasTile(cell))
         {
             return swimmingSigil;
         }
 
-        if (chasmMap.HasTile(cell))
+        if (chasmMap != null && chasmMap.HasTile(cell))
         {
             return flyingSigil;
         }

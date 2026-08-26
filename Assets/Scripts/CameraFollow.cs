@@ -22,9 +22,22 @@ public class CameraFollow : MonoBehaviour
             return;
         }
 
-        var goal = new Vector3(target.position.x + offset.x,
-            target.position.y + offset.y,
-            transform.position.z);
-        transform.position = Vector3.SmoothDamp(transform.position, goal, ref _velocity, smoothTime);
+        transform.position = Vector3.SmoothDamp(transform.position, Goal(), ref _velocity, smoothTime);
+    }
+
+    public void Snap()
+    {
+        if (target == null)
+        {
+            return;
+        }
+
+        transform.position = Goal();
+        _velocity = Vector3.zero;
+    }
+
+    private Vector3 Goal()
+    {
+        return new Vector3(target.position.x + offset.x, target.position.y + offset.y, transform.position.z);
     }
 }

@@ -9,9 +9,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 820237368963251157, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 3062185911154772982}
+    - target: {fileID: 820237368963251157, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: _animator
       value: 
       objectReference: {fileID: 3062185911154772982}
+    - target: {fileID: 820237368963251157, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 3379338925134195021}
     - target: {fileID: 820237368963251157, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: hasDirectionalSprites
       value: 1
@@ -26,11 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: fffbaa56f18337104974f6d046ca15ca, type: 2}
     - target: {fileID: 2637991325129454414, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 64.248146
       objectReference: {fileID: 0}
     - target: {fileID: 2637991325129454414, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 39.151558
       objectReference: {fileID: 0}
     - target: {fileID: 2637991325129454414, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -78,11 +86,11 @@ PrefabInstance:
       objectReference: {fileID: -5703633228528421070, guid: 72740c40acfbe1239b3304df5e02c807, type: 3}
     - target: {fileID: 3592138512623344584, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3592138512623344584, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: -3915
       objectReference: {fileID: 0}
     - target: {fileID: 3592138512623344584, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_SortingLayerID
@@ -110,11 +118,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5802512193167214922, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.06
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5802512193167214922, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6883658680300217455, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: m_BodyType
@@ -149,13 +157,73 @@ PrefabInstance:
     - {fileID: 3471160246079603896, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8985160675770995380, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5609980950124411927}
     - targetCorrespondingSourceObject: {fileID: 7380595139243384231, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3062185911154772982}
     - targetCorrespondingSourceObject: {fileID: 7380595139243384231, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7857409958705968722}
+      addedObject: {fileID: 7039614634384610691}
   m_SourcePrefab: {fileID: 100100000, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+--- !u!212 &3379338925134195021 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3592138512623344584, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+  m_PrefabInstance: {fileID: 2250678487594316421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5745095797225487311 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5802512193167214922, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+  m_PrefabInstance: {fileID: 2250678487594316421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7173583499890237489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8985160675770995380, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+  m_PrefabInstance: {fileID: 2250678487594316421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5609980950124411927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7173583499890237489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 771a2a05ad6b13a72aa68a226d24f195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OldManEncounter
+  talkKey: 101
+  rayOrigin: {fileID: 5745095797225487311}
+  facingDirection: {x: 1, y: 0}
+  sightRange: 6
+  sightMask:
+    serializedVersion: 2
+    m_Bits: 64
+  creatureToReveal: {fileID: 11400000, guid: d8715ba34da3f763ab48d570abb01fa5, type: 2}
+  dialogueLine:
+    m_TableReference:
+      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  talkPromptText:
+    m_TableReference:
+      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
+    m_TableEntryReference:
+      m_KeyId: 3399791348023296
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  showDebugRay: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &8741803554282385186 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7380595139243384231, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
@@ -183,7 +251,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7857409958705968722
+--- !u!114 &7039614634384610691
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,28 +260,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8741803554282385186}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 771a2a05ad6b13a72aa68a226d24f195, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d060562744165d45b4271ac1160167f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OldManEncounter
-  facingDirection: {x: 0, y: -1}
-  sightRange: 4
-  sightWidth: 0.2
-  sightMask:
-    serializedVersion: 2
-    m_Bits: 192
-  panelManager: {fileID: 0}
-  inventory: {fileID: 0}
-  creatureToReveal: {fileID: 11400000, guid: d5bfc4b21a0da535f90548f6201c978b, type: 2}
-  dialogueLine:
-    m_TableReference:
-      m_TableCollectionName: GUID:a3934c22933ed1fd688b94cdb220f1e6
-    m_TableEntryReference:
-      m_KeyId: 0
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  showDebugRay: 1
-  references:
-    version: 2
-    RefIds: []
+  m_EditorClassIdentifier: Assembly-CSharp::YSort
+  precision: 100

@@ -4,13 +4,12 @@ public class NotebookToggle : MonoBehaviour
 {
     [SerializeField] private KeyCode toggleKey = KeyCode.Tab;
     [SerializeField] private GameObject notebookPanel;
-    [SerializeField] private PanelManager panelManager;
 
     private void Update()
     {
         if (Input.GetKeyDown(toggleKey))
         {
-            if (!notebookPanel.activeSelf && !panelManager.CanOpen(notebookPanel))
+            if (!notebookPanel.activeSelf && !PanelManager.Instance.CanOpen(notebookPanel))
             {
                 return;
             }

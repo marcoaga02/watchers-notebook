@@ -8,7 +8,6 @@ public class ObstaclePrompt : MonoBehaviour
     [SerializeField] private LocalizedString promptText;
     [SerializeField] private LocalizedString stuckPromptText;
     [SerializeField] private GameObject evocationPanel;
-    [SerializeField] private PanelManager panelManager;
     [SerializeField] private PossessionController possessionController;
 
     private CreatureMover _mover;
@@ -25,7 +24,7 @@ public class ObstaclePrompt : MonoBehaviour
 
     private void Update()
     {
-        if (evocationPanel.activeSelf || !panelManager.CanOpen(evocationPanel))
+        if (evocationPanel.activeSelf || !PanelManager.Instance.CanOpen(evocationPanel))
         {
             HidePrompt();
             return;
@@ -34,6 +33,12 @@ public class ObstaclePrompt : MonoBehaviour
         if (possessionController.IsPossessing)
         {
             UpdatePossessed();
+            return;
+        }
+
+        if (TerrainProbe.Instance == null)
+        {
+            HidePrompt();
             return;
         }
 
