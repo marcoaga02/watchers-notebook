@@ -2355,10 +2355,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
   collectedSigils:
   - {fileID: 11400000, guid: 84a6966185a93dca782cc635144cfd03, type: 2}
+  - {fileID: 11400000, guid: bad63adb0247baae5bf7a14f5cf16774, type: 2}
   collectedBehaviors:
   - {fileID: 11400000, guid: ceff282cf3ce464488fdc2bc43c31d8f, type: 2}
+  - {fileID: 11400000, guid: 585dbb1fce1145a6814fd6d9fe740db1, type: 2}
   observedSpecies:
   - {fileID: 11400000, guid: d5bfc4b21a0da535f90548f6201c978b, type: 2}
+  - {fileID: 11400000, guid: d8715ba34da3f763ab48d570abb01fa5, type: 2}
 --- !u!4 &769201907
 Transform:
   m_ObjectHideFlags: 0
@@ -4560,7 +4563,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3032715497919754717, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
       propertyPath: m_SortingOrder
-      value: -11685
+      value: -10816
       objectReference: {fileID: 0}
     - target: {fileID: 3076504636192606311, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
       propertyPath: evocationPanel
@@ -4568,11 +4571,11 @@ PrefabInstance:
       objectReference: {fileID: 223801829}
     - target: {fileID: 4563148621810833755, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 175.21
+      value: 174.19
       objectReference: {fileID: 0}
     - target: {fileID: 4563148621810833755, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 116.85
+      value: 108.16
       objectReference: {fileID: 0}
     - target: {fileID: 4563148621810833755, guid: 2361cd38d64287f5dad56095551348ab, type: 3}
       propertyPath: m_LocalPosition.z
