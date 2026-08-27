@@ -5,14 +5,18 @@ using UnityEngine.Localization;
 [CreateAssetMenu(menuName = "Watcher/Creature Definition")]
 public class CreatureDefinition : ScriptableObject
 {
-    public string className;
-    public CreatureDefinition parent;
-    public List<CapabilitySigil> declaredCapabilities = new();
+    [SerializeField] private string className;
+    [SerializeField] private CreatureDefinition parent;
+    [SerializeField] private List<CapabilitySigil> declaredCapabilities = new();
 
     [Header("Evocation")]
-    public LocalizedString displayName;
-    public Sprite icon;
-    public GameObject prefab;
+    [SerializeField] private LocalizedString displayName;
+    [SerializeField] private Sprite icon;
+    [SerializeField] private GameObject prefab;
+
+    public LocalizedString DisplayName => displayName;
+    public Sprite Icon => icon;
+    public GameObject Prefab => prefab;
 
     public bool Implements(CapabilitySigil capability)
     {

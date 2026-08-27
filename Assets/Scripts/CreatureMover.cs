@@ -156,7 +156,7 @@ public class CreatureMover : MonoBehaviour
         }
 
         var behavior = creature.GetBehavior(currentCapability);
-        return behavior != null ? behavior.speedMultiplier : 1f;
+        return behavior != null ? behavior.SpeedMultiplier : 1f;
     }
 
     public bool IsStuck()

@@ -7,8 +7,11 @@ public class Creature : MonoBehaviour
     [Serializable]
     private struct InitialBinding
     {
-        public CapabilitySigil capability;
-        public Behavior behavior;
+        [SerializeField] private CapabilitySigil capability;
+        [SerializeField] private Behavior behavior;
+
+        public CapabilitySigil Capability => capability;
+        public Behavior Behavior => behavior;
     }
 
     [SerializeField] private CreatureDefinition definition;
@@ -21,7 +24,7 @@ public class Creature : MonoBehaviour
     {
         foreach (var binding in initialBindings)
         {
-            Bind(binding.capability, binding.behavior);
+            Bind(binding.Capability, binding.Behavior);
         }
     }
 

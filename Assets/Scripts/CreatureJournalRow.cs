@@ -15,13 +15,13 @@ public class CreatureJournalRow : MonoBehaviour
 
     public void Setup(CreatureDefinition species, IReadOnlyList<CapabilitySigil> collectedSigils)
     {
-        icon.sprite = species.icon;
-        nameLabel.text = $"{nameLabelFormat.GetLocalizedString()} {species.displayName.GetLocalizedString()}";
+        icon.sprite = species.Icon;
+        nameLabel.text = $"{nameLabelFormat.GetLocalizedString()} {species.DisplayName.GetLocalizedString()}";
 
         var implemented = collectedSigils.Where(species.Implements).ToList();
         var implementedText = implemented.Count == 0
             ? "???"
-            : string.Join(", ", implemented.Select(sigil => sigil.interfaceName));
+            : string.Join(", ", implemented.Select(sigil => sigil.InterfaceName));
 
         implementsLabel.text = $"{implementsLabelFormat.GetLocalizedString()} {implementedText}";
     }

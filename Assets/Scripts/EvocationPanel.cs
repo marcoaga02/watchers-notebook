@@ -92,7 +92,7 @@ public class EvocationPanel : MonoBehaviour
         var bindings = _sigilRows.Where(row => row.IsOn)
             .Select(row => new KeyValuePair<CapabilitySigil, Behavior>(row.Sigil, row.SelectedBehavior));
 
-        possessionController.Evoke(_matched.prefab, bindings);
+        possessionController.Evoke(_matched.Prefab, bindings);
         gameObject.SetActive(false);
     }
 }

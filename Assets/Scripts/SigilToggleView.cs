@@ -19,7 +19,7 @@ public class SigilToggleView : MonoBehaviour
     {
         _toggle = GetComponent<Toggle>();
         Sigil = sigil;
-        label.text = sigil.interfaceName;
+        label.text = sigil.InterfaceName;
         label.ForceMeshUpdate();
         _toggle.onValueChanged.AddListener(OnValueChanged);
     }

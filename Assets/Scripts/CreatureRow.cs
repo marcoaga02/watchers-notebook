@@ -9,8 +9,8 @@ public class CreatureRow : MonoBehaviour
 
     public void Setup(CreatureDefinition creature)
     {
-        icon.sprite = creature.icon;
-        label.text = creature.displayName.GetLocalizedString();
+        icon.sprite = creature.Icon;
+        label.text = creature.DisplayName.GetLocalizedString();
         label.ForceMeshUpdate();
     }
 }

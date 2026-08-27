@@ -21,12 +21,12 @@ public class BehaviorBindingRow : MonoBehaviour
     public void Setup(CapabilitySigil capability, IReadOnlyList<Behavior> availableBehaviors)
     {
         Capability = capability;
-        capabilityLabel.text = implementationOfFormat.GetLocalizedString(capability.methodSignature);
+        capabilityLabel.text = implementationOfFormat.GetLocalizedString(capability.MethodSignature);
         capabilityLabel.ForceMeshUpdate();
 
         _options = availableBehaviors.Where(behavior => behavior.Satisfies(capability)).ToList();
         dropdown.ClearOptions();
-        dropdown.AddOptions(_options.ConvertAll(behavior => behavior.displayName.GetLocalizedString()));
+        dropdown.AddOptions(_options.ConvertAll(behavior => behavior.DisplayName.GetLocalizedString()));
         dropdown.onValueChanged.AddListener(OnDropdownChanged);
 
         OnDropdownChanged(dropdown.value);
