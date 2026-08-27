@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 145828413
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3145328045451892686, guid: 085da1586b294e5888df71507f90be74, type: 3}
@@ -239,10 +239,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   speed: 4
-  _spriteRenderer: {fileID: 6491926555215746539}
-  _animator: {fileID: 8885522909749678423}
+  sprintMultiplier: 1.5
+  spriteRenderer: {fileID: 0}
+  animator: {fileID: 0}
   creature: {fileID: 347444026099274749}
-  hasDirectionalSprites: 1
+  hasDirectionalSprites: 0
+  groundCheckOffset: {x: 0, y: 0}
+  showDebugGateCell: 0
 --- !u!114 &2744868706651540842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,6 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Creature
   definition: {fileID: 11400000, guid: d5bfc4b21a0da535f90548f6201c978b, type: 2}
+  initialBindings: []
 --- !u!1 &6620902668114922139
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,7 +452,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 145828413
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}

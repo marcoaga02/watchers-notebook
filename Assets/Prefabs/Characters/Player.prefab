@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 145828413
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
@@ -261,7 +261,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 145828413
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8107172888652668758, guid: b45cf6a71ffeef998abd3556d15f22aa, type: 3}
@@ -422,10 +422,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   speed: 4
-  _spriteRenderer: {fileID: 3592138512623344584}
-  _animator: {fileID: 1862722400439890639}
+  sprintMultiplier: 1.5
+  spriteRenderer: {fileID: 0}
+  animator: {fileID: 0}
   creature: {fileID: 6085578354281746941}
-  hasDirectionalSprites: 1
+  hasDirectionalSprites: 0
+  groundCheckOffset: {x: 0, y: 0}
+  showDebugGateCell: 0
 --- !u!114 &5609683809984856905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,6 +465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Creature
   definition: {fileID: 11400000, guid: 086fd5b38470c937ba12651e55db2369, type: 2}
+  initialBindings: []
 --- !u!114 &1263309958128592845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,4 +478,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c31bf59fbb37852abaa448a6ea393ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
-  panelManager: {fileID: 0}
+  sprintKey: 304

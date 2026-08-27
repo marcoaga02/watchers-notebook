@@ -15,7 +15,7 @@ public class CreatureMover : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Creature creature;
     [Tooltip("On: the rig has real left/right art (MoveX carries sign, no flip). " +
-             "Off: only one side exists, mirrored via flipX (Orc, old Player).")]
+             "Off: only one side exists, mirrored via flipX.")]
     [SerializeField] private bool hasDirectionalSprites = true;
     [Tooltip("Offset from the Rigidbody2D position to the visual feet, used for every terrain " +
              "check. Match it to the Box Collider 2D's own offset so the gate lines up with " +
