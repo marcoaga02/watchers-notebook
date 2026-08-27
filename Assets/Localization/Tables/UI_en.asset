@@ -151,7 +151,8 @@ MonoBehaviour:
   - m_Id: 1502000000000018
     m_Localized: 'This creature cannot proceed here
 
-      (Press E to change creature)'
+      (Come back to the ground
+      or press E to change creature or implementation)'
     m_Metadata:
       m_Items: []
   - m_Id: 3047651874177024

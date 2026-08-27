@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Localization;
 
@@ -8,6 +9,7 @@ public class SigilPickup : Pickup
 
     protected override Sprite Icon => sigil != null ? sigil.Icon : null;
     protected override string PromptText => sigil != null ? promptFormat.GetLocalizedString(sigil.InterfaceName) : string.Empty;
+    protected override bool AlreadyCollected => sigil != null && PlayerInventory.Instance.CollectedSigils.Contains(sigil);
 
     protected override void Collect()
     {

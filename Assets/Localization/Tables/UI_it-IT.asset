@@ -151,8 +151,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000018
-    m_Localized: "Questa creatura non pu\xF2 proseguire qui\n(Premi E per cambiare
-      creatura)"
+    m_Localized: "Questa creatura non pu\xF2 proseguire qui\n(Torna sulla terraferma
+      o premi E per cambiare creatura o implementazione)"
     m_Metadata:
       m_Items: []
   - m_Id: 3047651874177024

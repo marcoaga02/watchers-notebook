@@ -8,6 +8,7 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private List<CapabilitySigil> collectedSigils = new();
     [SerializeField] private List<Behavior> collectedBehaviors = new();
     [SerializeField] private List<CreatureDefinition> observedSpecies = new();
+    [SerializeField] private List<string> metNpcs = new();
 
     public IReadOnlyList<CapabilitySigil> CollectedSigils => collectedSigils;
     public IReadOnlyList<Behavior> CollectedBehaviors => collectedBehaviors;
@@ -39,6 +40,19 @@ public class PlayerInventory : MonoBehaviour
         if (!observedSpecies.Contains(species))
         {
             observedSpecies.Add(species);
+        }
+    }
+
+    public bool HasMetNpc(string npcId)
+    {
+        return metNpcs.Contains(npcId);
+    }
+
+    public void MarkNpcMet(string npcId)
+    {
+        if (!metNpcs.Contains(npcId))
+        {
+            metNpcs.Add(npcId);
         }
     }
 }

@@ -3,6 +3,8 @@ using UnityEngine.Localization;
 
 public class OldManEncounter : MonoBehaviour
 {
+    [Tooltip("Unique per instance, used to remember across zone reloads whether this NPC already forced a stop.")]
+    [SerializeField] private string npcId;
     [SerializeField] private KeyCode talkKey = KeyCode.E;
     [SerializeField] private Transform rayOrigin;
     [SerializeField] private Vector2 facingDirection = Vector2.down;
@@ -19,6 +21,9 @@ public class OldManEncounter : MonoBehaviour
     private void Start()
     {
         GetComponent<CreatureMover>().SetFacing(facingDirection);
+        // the zone scene reloads from scratch on every visit, so without this the forced
+        // stop would trigger again every time the player re-enters the zone
+        _hasTriggered = PlayerInventory.Instance.HasMetNpc(npcId);
     }
 
     private void Update()
@@ -46,6 +51,7 @@ public class OldManEncounter : MonoBehaviour
         if (!_hasTriggered)
         {
             _hasTriggered = true;
+            PlayerInventory.Instance.MarkNpcMet(npcId);
             playerInput.GetComponent<CreatureMover>().SetFacing(-facingDirection);
             DialoguePanel.Instance.Show(dialogueLine.GetLocalizedString(), OnDialogueClosed);
             return;

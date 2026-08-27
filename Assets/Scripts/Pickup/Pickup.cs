@@ -9,10 +9,19 @@ public abstract class Pickup : MonoBehaviour
 
     protected abstract Sprite Icon { get; }
     protected abstract string PromptText { get; }
+    protected abstract bool AlreadyCollected { get; }
     protected abstract void Collect();
 
     private void Awake()
     {
+        // the zone scene reloads from scratch on every visit, so a pickup destroyed on a
+        // previous visit would otherwise reappear even though it's already in the inventory
+        if (AlreadyCollected)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         UpdateSprite();
     }
 
