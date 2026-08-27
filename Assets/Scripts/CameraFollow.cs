@@ -4,11 +4,17 @@ public class CameraFollow : MonoBehaviour
 {
     public static CameraFollow Instance { get; private set; }
 
-    public Transform target;
-    public float smoothTime = 0.15f;
-    public Vector2 offset;
+    [SerializeField] private Transform target;
+    [SerializeField] private float smoothTime = 0.15f;
+    [SerializeField] private Vector2 offset;
 
     private Vector3 _velocity;
+
+    public Transform Target
+    {
+        get => target;
+        set => target = value;
+    }
 
     private void Awake()
     {

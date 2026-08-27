@@ -65,7 +65,7 @@ public class PossessionController : MonoBehaviour
 
         _playerMover.SetControlEnabled(false);
         _playerInput.SetTarget(_possessed);
-        CameraFollow.Instance.target = _possessed.transform;
+        CameraFollow.Instance.Target = _possessed.transform;
     }
 
     private void Return()
@@ -77,6 +77,6 @@ public class PossessionController : MonoBehaviour
         _playerMover.transform.position = returnPosition;
         _playerMover.SetControlEnabled(true);
         _playerInput.SetTarget(_playerMover);
-        CameraFollow.Instance.target = _playerMover.transform;
+        CameraFollow.Instance.Target = _playerMover.transform;
     }
 }
