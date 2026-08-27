@@ -203,6 +203,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2697046145455367895}
     - target: {fileID: 820237368963251157, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
+      propertyPath: groundCheckOffset.y
+      value: -0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 820237368963251157, guid: e60fce46a1c090bfa91cdc935b9f1e3d, type: 3}
       propertyPath: hasDirectionalSprites
       value: 1
       objectReference: {fileID: 0}

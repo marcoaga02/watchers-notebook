@@ -151,8 +151,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1502000000000018
-    m_Localized: "Questa creatura non pu\xF2 proseguire qui\n(Premi E per cambiare
-      creatura)"
+    m_Localized: "Questa creatura non pu\xF2 proseguire qui\n(Torna sulla terraferma
+      o premi E per cambiare creatura o implementazione)"
     m_Metadata:
       m_Items: []
   - m_Id: 3047651874177024
@@ -208,7 +208,7 @@ MonoBehaviour:
     m_Localized: "Sei arrivato fin qui. Hai osservato creature diverse, una a una,
       senza fretta. Hai trovato capacit\xE0 e comportamenti separati, in punti diversi
       del mondo, e li hai uniti tu, di volta in volta, per costruire la creatura
-      giustaper ogni ostacolo. E quando un ostacolo non lasciava scampo, hai capito
+      giusta per ogni ostacolo. E quando un ostacolo non lasciava scampo, hai capito
       che bastava una creatura capace di pi\xF9 cose insieme.\n\nNon ti sei limitato
       a raccogliere pezzi: li hai messi insieme tu, ogni volta in modo diverso.\n\nSe
       vuoi proseguire, tornerai all'inizio della mappa, ma porterai con te tutto
