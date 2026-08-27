@@ -11,15 +11,11 @@ public class ObstaclePrompt : MonoBehaviour
     [SerializeField] private PossessionController possessionController;
 
     private CreatureMover _mover;
-    private string _resolvedPromptText;
-    private string _resolvedStuckPromptText;
     private bool _isShowingPrompt;
 
     private void Awake()
     {
         _mover = GetComponent<CreatureMover>();
-        _resolvedPromptText = promptText.GetLocalizedString();
-        _resolvedStuckPromptText = stuckPromptText.GetLocalizedString();
     }
 
     private void Update()
@@ -51,7 +47,7 @@ public class ObstaclePrompt : MonoBehaviour
             return;
         }
 
-        ShowPrompt(_resolvedPromptText, transform);
+        ShowPrompt(promptText.GetLocalizedString(), transform);
 
         if (Input.GetKeyDown(openKey))
         {
@@ -69,7 +65,7 @@ public class ObstaclePrompt : MonoBehaviour
             return;
         }
 
-        ShowPrompt(_resolvedStuckPromptText, possessed.transform);
+        ShowPrompt(stuckPromptText.GetLocalizedString(), possessed.transform);
 
         if (Input.GetKeyDown(openKey))
         {
