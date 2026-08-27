@@ -25,11 +25,11 @@ which behaviors you've actually seen for each one. Question marks fill in as you
 
 ## Controls
 
-- Arrow keys or WASD to move
-- Shift to run
-- E to interact, talk, collect, or open the evocation panel near an obstacle
-- Tab to open your notebook
-- Esc to close panels
+- `Arrow keys` or `WASD` to move
+- `Shift` to run
+- `E` to interact, talk, collect, or open the evocation panel near an obstacle
+- `Tab` to open your notebook
+- `Esc` to close panels
 
 ## Built with
 
