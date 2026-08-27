@@ -24,6 +24,11 @@ public class TerrainProbe : MonoBehaviour
         return grid.WorldToCell(worldPos);
     }
 
+    public Vector3 CellCenter(Vector3Int cell)
+    {
+        return grid.GetCellCenterWorld(cell);
+    }
+
     public CapabilitySigil GetRequiredCapability(Vector3 worldPos)
     {
         var cell = grid.WorldToCell(worldPos);

@@ -17,6 +17,13 @@ public class CreatureMover : MonoBehaviour
     [Tooltip("On: the rig has real left/right art (MoveX carries sign, no flip). " +
              "Off: only one side exists, mirrored via flipX (Orc, old Player).")]
     [SerializeField] private bool hasDirectionalSprites = true;
+    [Tooltip("Offset from the Rigidbody2D position to the visual feet, used for every terrain " +
+             "check. Match it to the Box Collider 2D's own offset so the gate lines up with " +
+             "what's actually drawn on screen, not the sprite's pivot.")]
+    [SerializeField] private Vector2 groundCheckOffset;
+    [Tooltip("Draws the grid cell the movement gate currently evaluates for this body, " +
+             "to compare it against the visible tile boundary.")]
+    [SerializeField] private bool showDebugGateCell;
 
     private Rigidbody2D _rb;
     private bool _hasAnimator;
@@ -24,8 +31,11 @@ public class CreatureMover : MonoBehaviour
 
     private Vector2 _input;
     private bool _isSprinting;
+    private Vector3? _debugCellCenter;
 
     public Vector2 Facing { get; private set; } = Vector2.down;
+
+    public Vector2 GroundPosition => _rb.position + groundCheckOffset;
 
     private void Awake()
     {
@@ -103,17 +113,22 @@ public class CreatureMover : MonoBehaviour
 
         if (TerrainProbe.Instance != null)
         {
-            var nextPosition = _rb.position + velocity * Time.fixedDeltaTime;
-            var currentCell = TerrainProbe.Instance.GetCell(_rb.position);
-            var nextCell = TerrainProbe.Instance.GetCell(nextPosition);
+            var nextGroundPosition = GroundPosition + velocity * Time.fixedDeltaTime;
+            var currentCell = TerrainProbe.Instance.GetCell(GroundPosition);
+            var nextCell = TerrainProbe.Instance.GetCell(nextGroundPosition);
 
             if (nextCell != currentCell)
             {
-                var required = TerrainProbe.Instance.GetRequiredCapability(nextPosition);
+                var required = TerrainProbe.Instance.GetRequiredCapability(nextGroundPosition);
                 if (required != null && !creature.CanUse(required))
                 {
                     velocity = Vector2.zero;
                 }
+            }
+
+            if (showDebugGateCell)
+            {
+                _debugCellCenter = TerrainProbe.Instance.CellCenter(currentCell);
             }
         }
 
@@ -134,7 +149,7 @@ public class CreatureMover : MonoBehaviour
             return 1f;
         }
 
-        var currentCapability = TerrainProbe.Instance.GetRequiredCapability(_rb.position);
+        var currentCapability = TerrainProbe.Instance.GetRequiredCapability(GroundPosition);
         if (currentCapability == null)
         {
             return 1f;
@@ -151,7 +166,7 @@ public class CreatureMover : MonoBehaviour
             return false;
         }
 
-        var currentRequired = TerrainProbe.Instance.GetRequiredCapability(_rb.position);
+        var currentRequired = TerrainProbe.Instance.GetRequiredCapability(GroundPosition);
         if (currentRequired != null && !creature.CanUse(currentRequired))
         {
             return true;
@@ -162,7 +177,7 @@ public class CreatureMover : MonoBehaviour
             return true;
         }
 
-        var aheadPosition = _rb.position + Facing;
+        var aheadPosition = GroundPosition + Facing;
         var aheadRequired = TerrainProbe.Instance.GetRequiredCapability(aheadPosition);
         return aheadRequired != null && !creature.CanUse(aheadRequired);
     }
@@ -200,5 +215,16 @@ public class CreatureMover : MonoBehaviour
             animator.SetFloat(MoveX, 0f);
             animator.SetFloat(MoveY, Mathf.Sign(_input.y));
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (!showDebugGateCell || _debugCellCenter == null)
+        {
+            return;
+        }
+
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(_debugCellCenter.Value, Vector3.one);
     }
 }

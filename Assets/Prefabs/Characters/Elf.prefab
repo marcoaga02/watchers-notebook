@@ -258,6 +258,8 @@ MonoBehaviour:
   animator: {fileID: 6685796286790480470}
   creature: {fileID: 154587497355107480}
   hasDirectionalSprites: 1
+  groundCheckOffset: {x: 0, y: -0.8}
+  showDebugGateCell: 0
 --- !u!114 &6646013415374080978
 MonoBehaviour:
   m_ObjectHideFlags: 0

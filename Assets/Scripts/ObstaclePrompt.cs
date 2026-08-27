@@ -42,7 +42,7 @@ public class ObstaclePrompt : MonoBehaviour
             return;
         }
 
-        var aheadPosition = transform.position + (Vector3)_mover.Facing;
+        var aheadPosition = (Vector3)(_mover.GroundPosition + _mover.Facing);
         var required = TerrainProbe.Instance.GetRequiredCapability(aheadPosition);
 
         if (required == null)
